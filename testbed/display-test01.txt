@@ -1,0 +1,68 @@
+Test1
+
+Sunday, 30 August 2020
+
+Hostname......: raspby01
+Last login....: Sun, 30 Aug 17:46
+Uptime........: 0 days, 0:0 hours
+Average load..: 1.45 (1 min) | 0.39 (5 min) | 0.13 (15 min)
+Temperature...: 38.0 °C
+Storage.......: Total: 59G | Used: 3.0G | Free: 53G
+RAM (MB)......: Total: 4013 | Used: 162 | Free: 3633
+external Swap.: Total: 104 | Used: 0 | Free: 104
+RAM ARM.......: assigned: 940M
+RAM GPU.......: assigned: 74M
+IPs...........: LAN: 192.168.1.123
+				        WiFi: 192.168.1.111
+				        WAN: 217.61.147.150
+
+
+Test2
+
+Sunday, 30 August 2020
+
+Hostname......: raspby01
+Last login....: Sun, 30 Aug 17:46
+Uptime........: 0 days, 0:0 hours
+Average load..: 1.45 (1 min) | 0.39 (5 min) | 0.13 (15 min)
+Temperature...: 38.0 °C
+Storage.......: Total: 59G | Used: 3.0G | Free: 53G
+RAM (MB)......: Total: 4013 | Used: 162 | Free: 3633
+external Swap.: Total: 104 | Used: 0 | Free: 104
+RAM ARM.......: assigned: 940M
+RAM GPU.......: assigned: 74M
+IPs...........: LAN: 192.168.1.123 | WiFi: 192.168.1.111 | WAN: 217.61.147.150
+
+Test3
+move info up one line
+
+         .     . 
+    ...  :``..': 
+     : ````.'   :''::' 
+   ..:..  :     .'' :       Sunday, 30 August 2020
+``.    `:    .'     : 
+    :    :   :        :     Hostname......: raspby01
+     :   :   :         :    Last login....: Sun, 30 Aug 17:46
+     :    :   :        :    Uptime........: 0 days, 0:0 hours
+      :    :   :..''''``::. Average load..: 1.45 (1 min) | 0.39 (5 min) | 0.13 (15 min)
+       : ...:..'     .''    Temperature...: 38.0 °C
+       .'   .'  .::::'      Storage.......: Total: 59G | Used: 3.0G | Free: 53G
+      :..'''``:::::::       RAM (MB)......: Total: 4013 | Used: 162 | Free: 3633
+      '         `::::       external Swap.: Total: 104 | Used: 0 | Free: 104
+                  `::.      RAM ARM.......: assigned: 940M
+                   `::      RAM GPU.......: assigned: 74M
+                    :::.    IPs...........: LAN: 192.168.1.123 | WiFi: 192.168.1.111 | WAN: 217.61.147.150
+         ..:.:.::'`. ::'`.  . : : . 
+       ..'      `:.: ::   :'       .: 
+      .:        .:``:::  :       .: :: 
+      .:    ..''     :::.'    :':    :  
+       : .''         .:: : : ' 
+        :          .'`:: 
+                      :: 
+                      :: 
+                      :: 
+                       
+
+
+
+Test3
