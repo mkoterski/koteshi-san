@@ -3,13 +3,17 @@
 # 
 # Add the script call as the last line in /etc/profile 
 #
-# Last Update: 2020-08-31
+# Last Update: 2020-09-01
 # Modified by: Matthias Koterski
 #
 # To do:
-# Hide Ethernet and WAN IP if not connected.
-# Add weather for Bamberg (or other location).
-# 'Tidy up' RAM display. Current issue caused as "vcgencmd get_mem arm" returns "arm=948M" instead of "948M".
+# - Hide Ethernet and WAN IP if not connected.
+# - Add weather for Bamberg (or other location).
+# - 'Tidy up' RAM display. Current issue caused as "vcgencmd get_mem arm" returns "arm=948M" instead of "948M".
+#   RAMARM=`sed -e 's#.*arm=\(\)#\1#' <<< `vcgencmd get_mem arm`` causes error
+# - Change Average load in percentage (12%) instead of 0.12
+# - Make it beautiful with some nice ASCII art
+# 
 #
 # Change log: 
 #
@@ -31,7 +35,7 @@ LAST1=`last -2 -a | awk 'NR==2{print $3}'` # weekday
 LAST2=`last -2 -a | awk 'NR==2{print $5}'` # day
 LAST3=`last -2 -a | awk 'NR==2{print $4}'` # month
 LAST4=`last -2 -a | awk 'NR==2{print $6}'` # time
-# LAST5=`last -2 -a | awk 'NR==2{print $10}'` # remote computer might not be displayed. Removed from display.
+# LAST5=`last -2 -a | awk 'NR==2{print $10}'` # remote IP
 
 # Uptime 1.0
 UP0=`cut -d. -f1 /proc/uptime`
@@ -42,6 +46,7 @@ UP4=$(($UP0%60)) # Seconds
 
 # Average Load 1.0
 LOAD1=`cat /proc/loadavg | awk '{print $1}'` # Last minute
+#LOAD1PER=`cat /proc/loadavg | awk '{print $1}'` # Last minute load in percent
 LOAD2=`cat /proc/loadavg | awk '{print $2}'` # Last 5 Minutes
 LOAD3=`cat /proc/loadavg | awk '{print $3}'` # Last 15 Minutes
 
