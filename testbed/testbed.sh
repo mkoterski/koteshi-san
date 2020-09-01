@@ -1,11 +1,25 @@
+# WANIP
+
 myip="$(dig +short myip.opendns.com @resolver1.opendns.com)"
 echo "My WAN/Public IP address: ${myip}"
 
 
-host myip.opendns.com resolver1.opendns.com | grep="has address"
+pi@raspby01:/ $ host myip.opendns.com resolver1.opendns.com
+Using domain server:
+Name: resolver1.opendns.com
+Address: 208.67.222.222#53
+Aliases: 
+
+myip.opendns.com has address 217.61.154.58
+Host myip.opendns.com not found: 3(NXDOMAIN)
+Host myip.opendns.com not found: 3(NXDOMAIN)
+
+echo -n `host myip.opendns.com resolver1.opendns.com | tail -c 10` #useless
+NXDOMAIN)
 
 
-wanip=wget -q -O - http://icanhazip.com/ | tail | echo=$wanip> /home/pi/wanip.txt
+
+
 
 
 Text Extraction!!!
