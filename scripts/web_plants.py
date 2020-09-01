@@ -57,7 +57,7 @@ def auto_water(toggle):
             except:
                 pass
         if not running:
-            os.system("python3.4 auto_water.py&")
+            os.system("python3.7 auto_water.py&")
     else:
         templateData = template(text = "Auto Watering Off")
         os.system("pkill -f water.py")
@@ -65,4 +65,4 @@ def auto_water(toggle):
     return render_template('main.html', **templateData)
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=80, debug=True)
+    app.run(host='192.168.1.111', port=80, debug=True)
