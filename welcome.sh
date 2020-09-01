@@ -66,9 +66,12 @@ RAM4=`free --mega | grep 'Swap' | awk '{print $3}'` # Swap used
 RAM5=`free --mega | grep 'Swap' | awk '{print $2}'` # Swap total
 RAM6=`free --mega | grep 'Swap' | awk '{print $3}'` # Swap used
 RAM7=`free --mega | grep 'Swap' | awk '{print $4}'` # Swap free
-# deactivated as it suddenly caused issues
+RAMARM=`vcgencmd get_mem arm | tail -c 5` #ARM MEM
+RAMGPU=`vcgencmd get_mem gpu | tail -c 4` #GPU MEM
+# Caused errors
 #RAMARM=`sed -e 's#.*arm=\(\)#\1#' <<< `vcgencmd get_mem arm`` # ARM MEM
 #RAMGPU=`sed -e 's#.*gpu=\(\)#\1#' <<< `vcgencmd get_mem gpu`` # GPU MEM
+
 
 # Find IP addresses 1.3
 if ( ifconfig | grep -q "eth0" ) ; then IP_LAN=`ip addr show eth0 | grep -vw "inet6" | grep "global" | grep -w "inet" | cut -d/ -f1 | awk '{ print $2 }'` ; else IP_LAN="---" ; fi ; #Ethernet IP
