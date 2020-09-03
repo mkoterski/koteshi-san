@@ -6,7 +6,7 @@ import RPi.GPIO as GPIO
 print "Display the GPIO input pin states"
 print "Ctrl C to stop"
 boardRevision = GPIO.RPI_REVISION
- #define the pins to use
+#define the pins to use
 if boardRevision == 1:
   pinout = [-1,-1,0,-1,1,-1,4,14,-1,15,17,18,21,-1,22,23,-1,24,10,-1,9,25,11,8,-1,7]
 if boardRevision == 2:
