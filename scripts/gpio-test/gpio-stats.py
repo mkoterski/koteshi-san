@@ -10,8 +10,8 @@
 # Modified by: Matthias Koterski
 #
 # To do:
-# - Make it beautiful with some nice ASCII art
-# 
+# - Make it work
+# - Make it beautiful
 #
 # Change log: 
 # 0.1a - Initial version.
