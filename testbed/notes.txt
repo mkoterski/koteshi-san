@@ -1,0 +1,15 @@
+Check Python packages installed
+sudo apt list --installed
+
+pi@raspby01:/ $ python3.7 -m pip install RPi.GPIO
+Looking in indexes: https://pypi.org/simple, https://www.piwheels.org/simple
+Requirement already satisfied: RPi.GPIO in /usr/lib/python3/dist-packages (0.7.0)
+pi@raspby01:/ $ python3.7 -m pip install flask
+Looking in indexes: https://pypi.org/simple, https://www.piwheels.org/simple
+Requirement already satisfied: flask in /usr/lib/python3/dist-packages (1.0.2)
+pi@raspby01:/ $ python3.7 -m pip install psutil
+Looking in indexes: https://pypi.org/simple, https://www.piwheels.org/simple
+Requirement already satisfied: psutil in /usr/lib/python3/dist-packages (5.5.1)
+
+
+sudo python3.7 /home/pi/isplash/scripts/web_plants.py

@@ -19,7 +19,28 @@ NXDOMAIN)
 
 
 
+# Run motd.d manually
+sudo run-parts /etc/update-motd.d/
+Linux raspby01 5.4.51-v7l+ #1333 SMP Mon Aug 10 16:51:40 BST 2020 armv7l
 
+
+#Bash colour palette
+for x in {0..8}; do for i in {30..37}; do for a in {40..47}; do echo -ne "\e[$x;$i;$a""m\\\e[$x;$i;$a""m\e[0;37;40m "; done; echo; done; done; echo ""
+
+#Bash 256 colour palette
+curl -s https://gist.githubusercontent.com/HaleTom/89ffe32783f89f403bba96bd7bcd1263/raw/ | bash
+
+
+RAMGPU2=`vcgencmd get_mem arm | sed -e 's/arm=\(.*\)M/\1/'`
+
+RAMGPU=`sed -e 's#.*gpu=\(\)#\1#' <<< `vcgencmd get_mem gpu``
+
+RAMGPU3=`sed -e 's#.*(gpu=)\(\)#\1#' <<< `vcgencmd get_mem gpu``
+
+RAMGPU=`sed -e 's#.*gpu=\(\)#\1#' <<< `vcgencmd get_mem gpu`` # GPU MEM
+
+
+echo -n `vcgencmd get_mem gpu | tail -c 3`
 
 
 Text Extraction!!!

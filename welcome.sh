@@ -83,6 +83,16 @@ IP_WAN=`wget -q -O - http://icanhazip.com/ | tail` #WAN IP
 # Weather 0.1
 
 
+# Plant Section 0.1
+# automatic watering activation // automatic watering  N O T  activated !!!
+# environmental Temperature
+# Location weather
+# Number of plants
+# Last watering1
+# soil moisture1
+# soil Temperature1
+
+
 
 # Splash 0.1b
 # Standard display
@@ -97,7 +107,7 @@ echo "
 \033[0;37mStorage.......: Total: $DISK1 | Used: $DISK2 | Free: $DISK3
 \033[0;37mRAM (MB)......: Total: $RAM1 | Used: $RAM2 | Free: $RAM3
 \033[0;37mexternal Swap.: Total: $RAM5 | Used: $RAM6 | Free: $RAM7
-\033[0;37mRAM ARM.......: assigned: $RAMARM
-\033[0;37mRAM GPU.......: assigned: $RAMGPU
+\033[0;37mRAM ARM.......: assigned: $RAMARM Hahaha
+\033[0;37mRAM GPU.......: assigned: $RAMGPU Hahaha
 \033[0;37mIPs...........: LAN: \033[1;35m$IP_LAN \033[0;37m| WiFi: \033[1;35m$IP_WIFI\033[0;37m | WAN: \033[1;35m$IP_WAN
 \033[m"
