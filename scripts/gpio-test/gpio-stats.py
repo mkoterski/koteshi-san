@@ -1,12 +1,29 @@
 #!/usr/bin/env python
-#GPIO input state monitor on the Raspberry Pi
-#GPIO state - show the state of all the GPIO inputs on P1
-#non GPIO pins shown as x
+# GPIO input state monitor on the Raspberry Pi 0.1a
+#
+# GPIO state - show the state of all the GPIO inputs on P1
+# non GPIO pins shown as x
+#
+# Script for GPIO stats and testing
+#
+# Last Update: 2020-09-03
+# Modified by: Matthias Koterski
+#
+# To do:
+# - Make it beautiful with some nice ASCII art
+# 
+#
+# Change log: 
+# 0.1a - Initial version.
+#
+################################################################################################################
+
+
 import RPi.GPIO as GPIO
 print "Display the GPIO input pin states"
 print "Ctrl C to stop"
 boardRevision = GPIO.RPI_REVISION
-#define the pins to use
+  #define the pins to use
 if boardRevision == 1:
   pinout = [-1,-1,0,-1,1,-1,4,14,-1,15,17,18,21,-1,22,23,-1,24,10,-1,9,25,11,8,-1,7]
 if boardRevision == 2:
