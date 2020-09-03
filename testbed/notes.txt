@@ -13,3 +13,7 @@ Requirement already satisfied: psutil in /usr/lib/python3/dist-packages (5.5.1)
 
 
 sudo python3.7 /home/pi/isplash/scripts/web_plants.py
+
+# Start Webserver
+cd /home/pi/isplash/scripts/; sudo python3.7 web_plants.py
+
