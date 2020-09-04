@@ -18,7 +18,6 @@
 #
 ################################################################################################################
 
-
 import RPi.GPIO as GPIO
 print "Display the GPIO input pin states"
 print "Ctrl C to stop"

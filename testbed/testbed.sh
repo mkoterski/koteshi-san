@@ -18,6 +18,12 @@ echo -n `host myip.opendns.com resolver1.opendns.com | tail -c 10` #useless
 NXDOMAIN)
 
 
+pi@raspby01:~ $ cat | host myip.opendns.com resolver1.opendns.com | grep 'myip.opendns.com has address '
+myip.opendns.com has address 217.61.154.58
+
+
+
+
 
 # Run motd.d manually
 sudo run-parts /etc/update-motd.d/

@@ -1,5 +1,5 @@
 # gpio_swtich.py
-# by Scott Kildall (www.kildall.com)
+# Based on original work by Scott Kildall (www.kildall.com)
 # LED is on pin 4, use a 270 Ohm reistor to ground
 # Switch is on pin 22, use a pull-down resistor (10K) to ground
 

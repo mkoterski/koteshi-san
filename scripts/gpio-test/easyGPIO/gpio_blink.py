@@ -8,6 +8,7 @@
 # - Create menu
 # - Add option for number of blinkings
 # - Add option for duration of blinkings
+# - Add option to cancel script not just with ctrl + C
 #
 # Change log: 
 #
@@ -17,7 +18,6 @@
 # LED is on pin 4, use a 270 Ohm reistor to ground
 #
 ################################################################################################################
-
 
 import RPi.GPIO as GPIO
 import time
