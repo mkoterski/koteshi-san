@@ -132,6 +132,8 @@ def setup():
 
 # Main function
 def main():
+	#Display main menu
+	show_menu()
 	# Print messages
 	clear_screen()
 	while True:
