@@ -85,7 +85,7 @@ def set_timeout():
 def show_menu():
 	clear_screen()
 	#print ("\033[1;32;40m Bright Green  ")
-	print ("\n          Interactive Blinking LED           ")
+	print ("\n                InterLED            ")
 	print ("=============================================\n")
 	print(("     LED pin is set to GPIO" + str(LedPin)))
 	print(("     LED interval time set to " + str(LedInterval) + " seconds"))
@@ -152,7 +152,6 @@ def destroy():
 	GPIO.output(LedPin, GPIO.HIGH)
 	# Release resources
 	GPIO.cleanup()
-
 
 
 # Script routine
