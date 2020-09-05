@@ -101,16 +101,15 @@ def show_menu():
 # Get menu selection and convert entered MenuSelection string to integer value
 	
 	MenuSelection = int(eval(input("Enter your choice [1-6] : ")))
- 
-### Take action as per selected menu-option ###
-	if MenuSelection == 1:
 
+	if MenuSelection == 1:
+	        print ("Starting backup...")
 	elif MenuSelection == 2:
-			set_led_pin()
+	        print ("Starting backup...")
 	elif MenuSelection == 3:
 	        print ("Rebooting the server...")
 	elif MenuSelection == 4:
-	        set_led_pin()
+	        print ("Starting backup...")
 	elif MenuSelection == 5:
 	        set_timeout()
 	elif MenuSelection == 6:
