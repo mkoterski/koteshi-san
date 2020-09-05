@@ -53,18 +53,18 @@ def setup():
     GPIO.setup(LedPin, GPIO.OUT, initial=GPIO.HIGH)
 
 # Define a main function for main process
-def main():
-    # Print messages
-        print_message()
-    while True:
-        print('LED ON')
-        # Turn on LED
-        GPIO.output(LedPin, GPIO.LOW)
-        time.sleep(0.5)
-        print('LED OFF')
-        # Turn off LED
-        GPIO.output(LedPin, GPIO.HIGH) 
-        time.sleep(0.5)
+# def main():
+#     # Print messages
+#         print_message()
+#     while True:
+#         print('LED ON')
+#         # Turn on LED
+#         GPIO.output(LedPin, GPIO.LOW)
+#         time.sleep(0.5)
+#         print('LED OFF')
+#         # Turn off LED
+#         GPIO.output(LedPin, GPIO.HIGH) 
+#         time.sleep(0.5)
 
 # Define a destroy function for clean up everything after
 # the script finished 
@@ -78,7 +78,7 @@ def destroy():
 if __name__ == '__main__':
     setup()
     try:
-            main()
+            menu()
     # When 'Ctrl+C' is pressed, the child program 
     # destroy() will be  executed.
     except KeyboardInterrupt:
