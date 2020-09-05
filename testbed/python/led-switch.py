@@ -9,11 +9,23 @@ import time
 # Set #27 as LED pin
 LedPin = 27
 
+# define our clear function 
+def clear_screen(): 
+
+	# for windows 
+	if name == 'nt': 
+		_ = system('cls') 
+
+	# for mac and linux(here, os.name is 'posix') 
+	else: 
+		_ = system('clear') 
 # menu
 def menu():
+	clear_screen()
     setup()
     print (30 * '-')
-    print ("   L E D   S W I T C H  0.1 ")
+    print ("   L E D   S W I T C H  0.1 \n")
+    print ("   ensure that the LED is connected to GPIO27\n")
     print (30 * '-')
     print ("1 - LED ON")
     print ("2 - LED OFF")
@@ -29,15 +41,18 @@ def menu():
             setup()
             GPIO.output(LedPin, GPIO.LOW)
             time.sleep(5)
+            clear_screen()
             menu()
     elif choice == 2:
             print ("LED turning off...")
             setup()
             GPIO.output(LedPin, GPIO.HIGH)
             time.sleep(5)
+            clear_screen()
             menu()
     elif choice == 3:
             print ("Shutting down program...")
+            clear_screen()
             destroy()
     else:    ## default ##
             print ("Invalid number. Try again...")
