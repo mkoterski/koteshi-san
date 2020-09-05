@@ -45,18 +45,18 @@ GlowDuration = 60
 
 # Menu function
 def print_message():
-	print ("========================================")
-	print ("|              Blink LED               |")
-	print ("|    ------------------------------    |")
-	print ("|         LED connect to GPIO27        |")
-	print ("|                                      |")
-	print ("|        LED will Blink at 500ms       |")
-	print ("|                                      |")
-	print ("========================================\n")
-	print('Program is running...')
-	print('Please press Ctrl+C to end the program...')
+	print ("=============================================")
+	print ("|                 Blinking LED               |")
+	print ("|    --------------------------------------  |")
+	print ("|     LED pin is set to GPIOXX               |")
+	print ("|                                            |")
+	print ("|     LED blinking time set to X second(s)   |")
+	print ("|                                            |")
+	print ("=============================================\n")
+	print ('Program is running...')
+	print ('Please press Ctrl+C to end the program...')
 	input ("Press Enter to begin\n")
-	#input ("Press Enter to begin") #python3 command
+
 
 # Setup function ensures all parameter are correctly set.
 def setup():
@@ -65,6 +65,7 @@ def setup():
 	# Set LedPin's mode to output,
 	# and initial level to High(3.3v)
 	GPIO.setup(LedPin, GPIO.OUT, initial=GPIO.HIGH)
+
 
 # Main function
 def main():
