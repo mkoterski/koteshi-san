@@ -97,19 +97,19 @@ def print_message():
 #	eval(input ("     What would you like to do?\n"))
 
 # Get menu selection and convert entered MenuSelection string to integer value
-MenuSelection = int(eval(input('Enter your choice: ')))
+	MenuSelection = int(eval(input('Enter your choice: ')))
  
 ### Take action as per selected menu-option ###
-if MenuSelection == 1:
-        set_led_pin()
-elif MenuSelection == 2:
-        print ("Starting user management...")
-elif MenuSelection == 3:
-        print ("Rebooting the server...")
-else:    ## default ##
-        print ("Invalid input entered. Try again...\n")
-        time.sleep(1)
-        print_message()
+	if MenuSelection == 1:
+	        set_led_pin()
+	elif MenuSelection == 2:
+	        print ("Starting user management...")
+	elif MenuSelection == 3:
+	        print ("Rebooting the server...")
+	else:    ## default ##
+	        print ("Invalid input entered. Try again...\n")
+	        time.sleep(1)
+	        print_message()
 
 # Setup function ensures all parameter are correctly set.
 def setup():
