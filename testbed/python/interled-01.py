@@ -27,11 +27,11 @@ from os import system, name
 # Define variable LedPin and set the value to #27, corresponding to the GPIO pin).
 LedPin = 27
 
-# Define duration of the LEDs glowing in seconds
+# Define intervals of the LEDs glowing in seconds
 LedInterval = 1
 
 # Define how often the LED should turn on and off
-GlowRepeats = 10
+LedSequenceRepeats = 10
 
 # Define automatic timeout in seconds
 LedTimeout = 60
@@ -50,6 +50,30 @@ def clear_screen():
 # Call clear screen function to 'tidy-up' menu appearance
 clear_screen() 
 
+# set_led_pin function select the corresponding GPIO pin on your Raspberry Pi
+def set_led_pin():
+	LedPin = 0
+	while 1 > LedPin or 40 < LedPin:
+	    try:
+	        LedPin = int(input("Please enter the GPIO pin number corresponding with the connected pin on your Pi [01 - 40]: "))
+	    except ValueError:
+	        print ("Your entry was not between 01 - 40 :(")
+	print_message()
+# set_led_pin function select the corresponding GPIO pin on your Raspberry Pi
+def set_led_interval():
+	print ("Please enter the GPIO pin number corresponding with the connected pin on your Pi")
+
+# set_led_pin function select the corresponding GPIO pin on your Raspberry Pi
+def set_led_sequence_repeats():
+	print ("Please enter the GPIO pin number corresponding with the connected pin on your Pi")
+
+# set_led_pin function select the corresponding GPIO pin on your Raspberry Pi
+def set_timeout():
+	print ("Please enter the GPIO pin number corresponding with the connected pin on your Pi")
+
+
+
+
 # Menu function
 def print_message():
 	print (" ")
@@ -58,7 +82,7 @@ def print_message():
 	print (" ")
 	print(("     LED pin is set to GPIO" + str(LedPin)))
 	print(("     LED interval time set to " + str(LedInterval) + " seconds"))
-	print(("     LED sequence repeats set to " + str(GlowRepeats) + " times"))
+	print(("     LED sequence repeats set to " + str(LedSequenceRepeats) + " times"))
 	print(("     LED sequence timeout set to " + str(LedTimeout) + " seconds"))
 	print (" ")
 	print ("=============================================\n")
@@ -68,23 +92,21 @@ def print_message():
 	print ("     4     - Change LED sequence repeats")
 	print ("     5     - Change LED sequence timeout\n")
 	print ("     9     - End program\n")
-	eval(input ("     What would you like to do?\n"))
+#	eval(input ("     What would you like to do?\n"))
 
-# Get menu choice
-choice = input('Enter your choice [1-3] : ')
-
-# Convert string to int type ##
-choice = int(choice)
+# Get menu selection and convert entered MenuSelection string to integer value
+MenuSelection = int(input('Enter your choice: '))
  
 ### Take action as per selected menu-option ###
-if choice == 1:
-        print ("Starting backup...")
-elif choice == 2:
+if MenuSelection == 1:
+        set_led_pin()
+elif MenuSelection == 2:
         print ("Starting user management...")
-elif choice == 3:
+elif MenuSelection == 3:
         print ("Rebooting the server...")
 else:    ## default ##
-        print ("Invalid number. Try again...")
+        print ("Invalid input entered. Try again...\n")
+        time.sleep(1)
 
 # Setup function ensures all parameter are correctly set.
 def setup():
@@ -108,7 +130,7 @@ def main():
 		print("LED OFF - Oooh")
 		# Turn off LED
 		GPIO.output(LedPin, GPIO.HIGH) 
-		time.sleep(1)
+		time.sleep(float(LedInterval))
 
 # Destroy function ensures a clean script finish (resetting pins, etc.)
 def destroy():

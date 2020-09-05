@@ -14,23 +14,23 @@
 #
 # 0.1a - Initial version. LED glows in endless loop for 1 second
 #
-# Based on original work by Scott Kildall (www.kildall.com)
-# LED is on pin 4, use a 270 Ohm reistor to ground
+# LED is connected to pin 24, with a 220 Ohm resistor connected to ground
 #
 ################################################################################################################
 
-import RPi.GPIO as GPIO
-import time
+# import RPi.GPIO as GPIO
+# import time
 
-GPIO.setwarnings(False)
-GPIO.setmode(GPIO.BCM)
-GPIO.setup(4, GPIO.OUT)
+# GPIO.setwarnings(False)
+# GPIO.setmode(GPIO.BCM)
+# GPIO.setup(4, GPIO.OUT)
 
-state = True
+# state = True
 
-# endless loop, on/off for 1 second
-while True:
-	GPIO.output(4,True)
-	time.sleep(1)	
-	GPIO.output(4,False)
-	time.sleep(1)
+# # endless loop, on/off for 1 second
+# while True:
+# 	GPIO.output(4,True)
+# 	time.sleep(1)	
+# 	GPIO.output(4,False)
+# 	time.sleep(1)
+
