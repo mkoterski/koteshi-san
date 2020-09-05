@@ -31,6 +31,9 @@
 import RPi.GPIO as GPIO
 import time
 
+# import only system and name from os for clear_screen()
+from os import system, name 
+
 # Define variable LedPin and set the value to #27, corresponding to the GPIO pin).
 LedPin = 27
 
@@ -42,6 +45,20 @@ GlowRepeats = 10
 
 # Define automatic timeout in seconds
 GlowDuration = 60
+
+# define our clear function 
+def clear_screen(): 
+
+	# for windows 
+	if name == 'nt': 
+		_ = system('cls') 
+
+	# for mac and linux(here, os.name is 'posix') 
+	else: 
+		_ = system('clear') 
+
+# Call clear screen function to 'tidy-up' menu appearance
+clear_screen() 
 
 # Menu function
 def print_message():
