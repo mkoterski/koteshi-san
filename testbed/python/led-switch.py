@@ -22,7 +22,8 @@ def clear_screen():
 # menu
 def menu():
     setup()
-    print ('50 * '-'\n')
+    print (50 * '-')
+    print ("")
     print ("           L E D   S W I T C H  0.1 \n")
     print ("ensure that the LED is connected to GPIO27\n")
     print (50 * '-')
