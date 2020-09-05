@@ -45,16 +45,14 @@ GlowDuration = 60
 
 # Menu function
 def print_message():
+	print ("                 Blinking LED                ")
 	print ("=============================================")
-	print ("|                 Blinking LED               |")
-	print ("|    --------------------------------------  |")
-	print ("|     LED pin is set to GPIOXX               |")
-	print ("|                                            |")
-	print ("|     LED blinking time set to X second(s)   |")
-	print ("|                                            |")
+	print ("     LED pin is set to GPIO" + str(LedPin))
+	print ("     LED blinking time set to " + str(GlowDuration) + " seconds")
+	print (" ")
 	print ("=============================================\n")
-	print ('Program is running...')
-	print ('Please press Ctrl+C to end the program...')
+	print ("Program is running...")
+	print ("Please press Ctrl+C to end the program...")
 	input ("Press Enter to begin\n")
 
 
@@ -72,11 +70,11 @@ def main():
 	# Print messages
 	print_message()
 	while True:
-		print('LED ON - Yay')
+		print("LED ON - Yay")
 		# Turn on LED
 		GPIO.output(LedPin, GPIO.LOW)
 		time.sleep(1)
-		print('LED OFF - Oooh')
+		print("LED OFF - Oooh")
 		# Turn off LED
 		GPIO.output(LedPin, GPIO.HIGH) 
 		time.sleep(1)
@@ -89,10 +87,10 @@ def destroy():
 	GPIO.cleanup()
 
 # Script routine
-if __name__ == '__main__':
+if __name__ == "__main__":
 	setup()
 	try:
 		main()
-	# Pressing 'Ctrl+C' executes destroy() function.
+	# Pressing "Ctrl+C" executes destroy() function.
 	except KeyboardInterrupt:
 		destroy()
