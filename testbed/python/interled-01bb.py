@@ -100,24 +100,19 @@ def show_menu():
 	print ("     6     - End program\n")
 # Get menu selection and convert entered MenuSelection string to integer value
 	
-	MenuSelection = int(eval(input('Enter your choice [1-6] : ')))
+	MenuSelection = int(eval(input("Enter your choice [1-6] : ")))
  
 ### Take action as per selected menu-option ###
 	if MenuSelection == 1:
-	        setup()
-			try:
-				main()
-			# Pressing "Ctrl+C" executes destroy() function.
-			except KeyboardInterrupt:
-				destroy()
+
 	elif MenuSelection == 2:
-	        set_led_pin()
+			set_led_pin()
 	elif MenuSelection == 3:
 	        print ("Rebooting the server...")
 	elif MenuSelection == 4:
 	        set_led_pin()
 	elif MenuSelection == 5:
-	        set_led_pin()
+	        set_timeout()
 	elif MenuSelection == 6:
 	        print ("Closing program...\n")
 	        time.sleep(1)
@@ -125,7 +120,7 @@ def show_menu():
 	else:    ## default ##
 	        print ("Invalid input entered. Try again...\n")
 	        time.sleep(1)
-	        print_message()
+	        show_menu()
 
 # Setup function ensures all parameter are correctly set.
 def setup():
