@@ -1,5 +1,3 @@
-led2to3.py
-
 #!/usr/bin/env python
 # Interactive script which lets you choose how many times and for how long an LED is blinking
 # 
