@@ -28,7 +28,7 @@ def menu():
     print ("ensure that the LED is connected to GPIO27\n")
     print (50 * '-')
     print ("1 - LED ON")
-    print ("2 - LED OFF")
+    print ("2 - LED OFF - LOL it's already off :D")
     print ("3 - Close program")
     print (50 * '-')
      
@@ -40,13 +40,13 @@ def menu():
             print ("LED turning on...")
             setup()
             GPIO.output(LedPin, GPIO.LOW)
-            time.sleep(5)
+            time.sleep(3)
             menu()
     elif choice == 2:
             print ("LED turning off...")
             setup()
             GPIO.output(LedPin, GPIO.HIGH)
-            time.sleep(5)
+            time.sleep(3)
             menu()
     elif choice == 3:
             print ("Shutting down program...")
