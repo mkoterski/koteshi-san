@@ -27,16 +27,16 @@ import time
 from os import system, name 
 
 # Define variable LedPin and set the value to #27, corresponding to the GPIO pin).
-LedPin = 27
+	LedPin = 27
 
 # Define intervals of the LEDs glowing in seconds
-LedInterval = 1
+	LedInterval = 1
 
 # Define how often the LED should turn on and off
-LedSequenceRepeats = 10
+	LedSequenceRepeats = 10
 
 # Define automatic timeout in seconds
-LedTimeout = 60
+	LedTimeout = 60
 
 # define our clear function 
 def clear_screen(): 
