@@ -78,24 +78,20 @@ def set_timeout():
 # Menu function
 def print_message():
 	clear_screen()
-	print ("\033[1;32;40m Bright Green  \n")
-	print ("          Interactive Blinking LED           ")
-	print ("=============================================")
-	print ("\033\n")
+	#print ("\033[1;32;40m Bright Green  ")
+	print ("\n          Interactive Blinking LED           ")
+	print ("=============================================\n")
 	print(("     LED pin is set to GPIO" + str(LedPin)))
 	print(("     LED interval time set to " + str(LedInterval) + " seconds"))
 	print(("     LED sequence repeats set to " + str(LedSequenceRepeats) + " times"))
-	print(("     LED sequence timeout set to " + str(LedTimeout) + " seconds"))
-	print (" ")
+	print(("     LED sequence timeout set to " + str(LedTimeout) + " seconds\n"))
 	print ("=============================================\n")
 	print ("     1     - Start LED sequence")
-	print ("     2     - Change GPIO pin")
+	print ("     2     - Change GPIO pin for the LED")
 	print ("     3     - Change LED blinking time")
 	print ("     4     - Change LED sequence repeats")
 	print ("     5     - Change LED sequence timeout\n")
 	print ("     9     - End program\n")
-#	eval(input ("     What would you like to do?\n"))
-
 # Get menu selection and convert entered MenuSelection string to integer value
 	MenuSelection = int(eval(input('Enter your choice: ')))
  
@@ -103,9 +99,13 @@ def print_message():
 	if MenuSelection == 1:
 	        set_led_pin()
 	elif MenuSelection == 2:
-	        print ("Starting user management...")
+	        set_led_pin()
 	elif MenuSelection == 3:
 	        print ("Rebooting the server...")
+	elif MenuSelection == 9:
+	        print ("Closing program...\n")
+	        time.sleep(1)
+	        destroy()
 	else:    ## default ##
 	        print ("Invalid input entered. Try again...\n")
 	        time.sleep(1)
@@ -141,6 +141,8 @@ def destroy():
 	GPIO.output(LedPin, GPIO.HIGH)
 	# Release resources
 	GPIO.cleanup()
+
+
 
 # Script routine
 if __name__ == "__main__":
