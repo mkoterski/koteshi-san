@@ -22,42 +22,42 @@ def clear_screen():
 # menu
 def menu():
 	clear_screen()
-    setup()
-    print (30 * '-')
-    print ("   L E D   S W I T C H  0.1 \n")
-    print ("   ensure that the LED is connected to GPIO27\n")
-    print (30 * '-')
-    print ("1 - LED ON")
-    print ("2 - LED OFF")
-    print ("3 - Close program")
-    print (30 * '-')
+        setup()
+        print (30 * '-')
+        print ("   L E D   S W I T C H  0.1 \n")
+        print ("   ensure that the LED is connected to GPIO27\n")
+        print (30 * '-')
+        print ("1 - LED ON")
+        print ("2 - LED OFF")
+        print ("3 - Close program")
+        print (30 * '-')
      
     # Get input and convert str to int
-    choice = int(input('Enter your choice [1-3] : '))
+        choice = int(input('Enter your choice [1-3] : '))
      
     # Take action as per selected menu-option ###
-    if choice == 1:
-            print ("LED turning on...")
-            setup()
-            GPIO.output(LedPin, GPIO.LOW)
-            time.sleep(5)
-            clear_screen()
-            menu()
-    elif choice == 2:
-            print ("LED turning off...")
-            setup()
-            GPIO.output(LedPin, GPIO.HIGH)
-            time.sleep(5)
-            clear_screen()
-            menu()
-    elif choice == 3:
-            print ("Shutting down program...")
-            clear_screen()
-            destroy()
-    else:    ## default ##
-            print ("Invalid number. Try again...")
-            time.sleep(2)
-            menu()
+        if choice == 1:
+                print ("LED turning on...")
+                setup()
+                GPIO.output(LedPin, GPIO.LOW)
+                time.sleep(5)
+                clear_screen()
+                    menu()
+        elif choice == 2:
+                print ("LED turning off...")
+                setup()
+                GPIO.output(LedPin, GPIO.HIGH)
+                time.sleep(5)
+                clear_screen()
+                menu()
+        elif choice == 3:
+                print ("Shutting down program...")
+                clear_screen()
+                destroy()
+        else:    ## default
+                print ("Invalid number. Try again...")
+                time.sleep(2)
+                menu()
 
 # Define a setup function for some setup
 def setup():
