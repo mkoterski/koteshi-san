@@ -68,13 +68,18 @@ def print_message():
 	print (" ")
 	print ("     LED pin is set to GPIO" + str(LedPin))
 	print ("     LED blinking time set to " + str(GlowDuration) + " seconds")
-	print ("     LED sequence repeats set to " + str(GlowDuration) + " times")
+	print ("     LED sequence repeats set to " + str(GlowRepeats) + " times")
 	print ("     LED sequence timeout set to " + str(LedTimeout) + " seconds")
 	print (" ")
 	print ("=============================================\n")
-	print ("Program is running...")
-	print ("Please press Ctrl+C to end the program...")
-	input ("Press Enter to begin\n")
+	print ("")
+	print ("	 1 - Change GPIO pin")
+	print ("	 2 - Change LED blinking time")
+	print ("	 3 - Change LED sequence repeats")
+	print ("	 4 - Change LED sequence timeout")
+	print ("	 q - End program")
+	print ("")
+	input ("     Press Enter to begin\n")
 
 
 # Setup function ensures all parameter are correctly set.
