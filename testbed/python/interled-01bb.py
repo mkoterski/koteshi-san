@@ -54,13 +54,14 @@ clear_screen()
 
 # set_led_pin function select the corresponding GPIO pin on your Raspberry Pi
 def set_led_pin():
-	LedPin = 0
-	while 1 > LedPin or 40 < LedPin:
-	    try:
-	        LedPin = int(eval(input("Please enter the GPIO pin number corresponding with the connected pin on your Pi [01 - 40]: ")))
-	    except ValueError:
-	        print ("Your entry was not between 01 - 40 :(")
-	print_message()
+	
+	# LedPin = 0
+	# while 1 > LedPin or 40 < LedPin:
+	#     try:
+	#         LedPin = int(eval(input("Please enter the GPIO pin number corresponding with the connected pin on your Pi [01 - 40]: ")))
+	#     except ValueError:
+	#         print ("Your entry was not between 01 - 40 :(")
+	show_menu()
 
 # set_led_pin function select the corresponding GPIO pin on your Raspberry Pi
 def set_led_interval():
@@ -72,11 +73,16 @@ def set_led_sequence_repeats():
 
 # set_led_pin function select the corresponding GPIO pin on your Raspberry Pi
 def set_timeout():
-	print ("Please enter the GPIO pin number corresponding with the connected pin on your Pi")
-
+	LedTimeout = 0
+	while 1 > LedTimeout or 60 < LedTimeout:
+	    try:
+	        LedTimeout = int(eval(input("Please enter the time in seconds [01 - 60] : ")))
+	    except ValueError:
+	        print ("Your entry was not between 01 - 60 :(")
+	show_menu()
 
 # Menu function
-def print_message():
+def show_menu():
 	clear_screen()
 	#print ("\033[1;32;40m Bright Green  ")
 	print ("\n          Interactive Blinking LED           ")
@@ -91,18 +97,28 @@ def print_message():
 	print ("     3     - Change LED blinking time")
 	print ("     4     - Change LED sequence repeats")
 	print ("     5     - Change LED sequence timeout\n")
-	print ("     9     - End program\n")
+	print ("     6     - End program\n")
 # Get menu selection and convert entered MenuSelection string to integer value
-	MenuSelection = int(eval(input('Enter your choice: ')))
+	
+	MenuSelection = int(eval(input('Enter your choice [1-6] : ')))
  
 ### Take action as per selected menu-option ###
 	if MenuSelection == 1:
-	        set_led_pin()
+	        setup()
+			try:
+				main()
+			# Pressing "Ctrl+C" executes destroy() function.
+			except KeyboardInterrupt:
+				destroy()
 	elif MenuSelection == 2:
 	        set_led_pin()
 	elif MenuSelection == 3:
 	        print ("Rebooting the server...")
-	elif MenuSelection == 9:
+	elif MenuSelection == 4:
+	        set_led_pin()
+	elif MenuSelection == 5:
+	        set_led_pin()
+	elif MenuSelection == 6:
 	        print ("Closing program...\n")
 	        time.sleep(1)
 	        destroy()
