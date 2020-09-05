@@ -35,7 +35,7 @@ import time
 LedPin = 27
 
 # Define duration of the LEDs glowing in seconds
-GlowDuration = int1
+GlowDuration = 1
 
 # Define how often the LED should turn on and off
 GlowRepeats = 10
