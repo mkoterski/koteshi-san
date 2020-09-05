@@ -18,9 +18,7 @@
 #
 ################################################################################################################
 
-
 # Logic
-
 
 # Hello
 # Currently set to...
@@ -30,9 +28,6 @@
 # Timeout on/off
 # Quit
 
-
-
-
 import RPi.GPIO as GPIO
 import time
 
@@ -40,11 +35,13 @@ import time
 LedPin = 27
 
 # Define duration of the LEDs glowing in seconds
-GlowDuration = 1
+GlowDuration = int1
 
 # Define how often the LED should turn on and off
 GlowRepeats = 10
 
+# Define automatic timeout in seconds
+GlowDuration = 60
 
 # Menu function
 def print_message():
@@ -58,8 +55,8 @@ def print_message():
 	print ("========================================\n")
 	print 'Program is running...'
 	print 'Please press Ctrl+C to end the program...'
-	raw_input ("Press Enter to begin\n")
-	#input ("Press Enter to begin\n") #python3 command
+	#raw_input ("Press Enter to begin\n")
+	input ("Press Enter to begin") #python3 command
 
 # Setup function ensures all parameter are correctly set.
 def setup():
