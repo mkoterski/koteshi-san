@@ -44,7 +44,7 @@ GlowDuration = 1
 GlowRepeats = 10
 
 # Define automatic timeout in seconds
-GlowDuration = 60
+LedTimeout = 60
 
 # define our clear function 
 def clear_screen(): 
@@ -62,10 +62,14 @@ clear_screen()
 
 # Menu function
 def print_message():
+	print (" ")
 	print ("                 Blinking LED                ")
 	print ("=============================================")
+	print (" ")
 	print ("     LED pin is set to GPIO" + str(LedPin))
 	print ("     LED blinking time set to " + str(GlowDuration) + " seconds")
+	print ("     LED sequence repeats set to " + str(GlowDuration) + " times")
+	print ("     LED sequence timeout set to " + str(LedTimeout) + " seconds")
 	print (" ")
 	print ("=============================================\n")
 	print ("Program is running...")
