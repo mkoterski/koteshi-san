@@ -35,7 +35,7 @@ import time
 LedPin = 27
 
 # Define duration of the LEDs glowing in seconds
-GlowDuration = int1
+GlowDuration = 1
 
 # Define how often the LED should turn on and off
 GlowRepeats = 10
@@ -55,8 +55,8 @@ def print_message():
 	print ("========================================\n")
 	print 'Program is running...'
 	print 'Please press Ctrl+C to end the program...'
-	#raw_input ("Press Enter to begin\n")
-	input ("Press Enter to begin") #python3 command
+	raw_input ("Press Enter to begin\n")
+	#input ("Press Enter to begin") #python3 command
 
 # Setup function ensures all parameter are correctly set.
 def setup():

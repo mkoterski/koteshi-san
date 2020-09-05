@@ -55,8 +55,8 @@ def print_message():
 	print ("========================================\n")
 	print('Program is running...')
 	print('Please press Ctrl+C to end the program...')
-	#raw_input ("Press Enter to begin\n")
-	eval(input ("Press Enter to begin")) #python3 command
+	input ("Press Enter to begin\n")
+	#input ("Press Enter to begin") #python3 command
 
 # Setup function ensures all parameter are correctly set.
 def setup():
