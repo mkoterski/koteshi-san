@@ -38,7 +38,7 @@ from os import system, name
 LedPin = 27
 
 # Define duration of the LEDs glowing in seconds
-GlowDuration = 1
+LedInterval = 1
 
 # Define how often the LED should turn on and off
 GlowRepeats = 10
@@ -67,18 +67,17 @@ def print_message():
 	print ("=============================================")
 	print (" ")
 	print ("     LED pin is set to GPIO" + str(LedPin))
-	print ("     LED blinking time set to " + str(GlowDuration) + " seconds")
+	print ("     LED interval time set to " + str(LedInterval) + " seconds")
 	print ("     LED sequence repeats set to " + str(GlowRepeats) + " times")
 	print ("     LED sequence timeout set to " + str(LedTimeout) + " seconds")
 	print (" ")
 	print ("=============================================\n")
-	print ("")
-	print ("	 1 - Change GPIO pin")
-	print ("	 2 - Change LED blinking time")
-	print ("	 3 - Change LED sequence repeats")
-	print ("	 4 - Change LED sequence timeout")
-	print ("	 q - End program")
-	print ("")
+	print ("     1 - Change GPIO pin")
+	print ("     2 - Change LED blinking time")
+	print ("     3 - Change LED sequence repeats")
+	print ("     4 - Change LED sequence timeout")
+	print ("     q - End program")
+	print (" ")
 	input ("     Press Enter to begin\n")
 
 
@@ -99,7 +98,7 @@ def main():
 		print("LED ON - Yay")
 		# Turn on LED
 		GPIO.output(LedPin, GPIO.LOW)
-		time.sleep(1)
+		time.sleep(float(LedInterval))
 		print("LED OFF - Oooh")
 		# Turn off LED
 		GPIO.output(LedPin, GPIO.HIGH) 
