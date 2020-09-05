@@ -22,14 +22,14 @@ def clear_screen():
 # menu
 def menu():
     setup()
-    print (30 * '-')
-    print ("   L E D   S W I T C H  0.1 \n")
-    print ("   ensure that the LED is connected to GPIO27\n")
-    print (30 * '-')
+    print (50 * '-')
+    print ("           L E D   S W I T C H  0.1 \n")
+    print ("ensure that the LED is connected to GPIO27\n")
+    print (50 * '-')
     print ("1 - LED ON")
     print ("2 - LED OFF")
     print ("3 - Close program")
-    print (30 * '-')
+    print (50 * '-')
      
     # Get input and convert str to int
     choice = int(input('Enter your choice [1-3] : '))
