@@ -94,6 +94,7 @@ def setup():
 def main():
 	# Print messages
 	print_message()
+	clear_screen()
 	while True:
 		print("LED ON - Yay")
 		# Turn on LED
