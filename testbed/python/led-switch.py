@@ -55,7 +55,7 @@ def setup():
 # Define a main function for main process
 def main():
     # Print messages
-    print_message()
+        print_message()
     while True:
         print('LED ON')
         # Turn on LED
@@ -78,7 +78,7 @@ def destroy():
 if __name__ == '__main__':
     setup()
     try:
-        main()
+            main()
     # When 'Ctrl+C' is pressed, the child program 
     # destroy() will be  executed.
     except KeyboardInterrupt:
