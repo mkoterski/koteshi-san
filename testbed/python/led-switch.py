@@ -7,7 +7,7 @@ import RPi.GPIO as GPIO
 import time
 
 # import only system from os 
-from os import system, name 
+# from os import system, name 
 
 # Set #27 as LED pin
 LedPin = 27
@@ -25,6 +25,7 @@ def clear_screen():
 # menu
 def menu():
     setup()
+    clear_screen()
     print (50 * '-')
     print ("")
     print ("           L E D   S W I T C H  0.1 \n")
