@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # Strings and Variables - Excercise 03:
 #
 # Write a Python program that prompts for input and displays a cat "saying" what was provided by
@@ -20,14 +21,16 @@
 # print("")
 
 # New attempt respecting the automatic extension of the speech bubble
-dataentry = str(input("What does the cat say? "))
+
+dataentry = input("What would you like the cat to say? ")
 text_length = len(dataentry)
-print("           {}".format("_" * text_length))
-print("          <  {} ".format(dataentry)
-print("           {}".format("_" * text_length))
-print(" /---.     |")
-print("( o.o )  --")
-print(" > ^ <")
+print('         {}'.format('_' * text_length))
+print('        < {} >'.format(text))
+print('         {}'.format('-' * text_length))
+print('        /')
+print(' /\_/\ /')
+print('( o.o )')
+print(' > ^ <')
 
 
 # Output Result
