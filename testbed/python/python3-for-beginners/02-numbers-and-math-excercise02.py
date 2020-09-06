@@ -41,8 +41,7 @@ opex_year = annual_hours * hosting_charge_hourly
 runtime = 918 % opex_day
 
 print("-" * 70)
-print(" {0:^70}".format("The Sillycube Network"))
-
+print("\n{0:^70}\n".format("The Sillycube Network"))
 print("-" * 70)
 # print("OPEX - 1 server / day : {}".format(str(opex_day)))
 # print("OPEX - 1 server / week : {}".format(str(opex_week)))
@@ -58,8 +57,8 @@ print("-" * 70)
 print("{0:^9} | {1:^9} | {2:^9} | {3:^9} | {4:^9} | {5:^9}".format("server", "hourly", "daily", "weekly", "monthly", "annual"))
 print("{0:^9} | {1:^9} | {1:^9} | {1:^9} | {1:^9} | {1:^9}".format("qty", "costs"))
 print("=" * 70)
-print("{0:^9} | {1:^9} | {2:^9} | {3:^9} | {4:^9} | {5:^9}".format("1", str(hosting_charge_hourly), str(opex_day), str(opex_week), str(opex_month), str(opex_year)))
-print("{0:^9} | {1:^9} | {1:^9} | {1:^9} | {1:^9} | {1:^9}".format("20", str(hosting_charge_hourly * 20), str(opex_day * 20), str(opex_week * 20), str(opex_month * 20), str(opex_year * 20)))
+print("{0:>9} | {1:>9.2} | {2:>9.2} | {3:>9.2} | {4:^9.2} | {5:^9.2}".format("1", hosting_charge_hourly, opex_day, opex_week, opex_month, opex_year))
+print("{0:>9} | {1:>9.2} | {1:>9.2} | {1:>9.2} | {1:^9.2} | {1:^9.2}".format("20", hosting_charge_hourly * 20, opex_day * 20, opex_week * 20, opex_month * 20, opex_year * 20))
 print("-" * 70)
 print("\nOne server can be run with EUR 981.00 for {} days.".format(str(runtime)))
 
