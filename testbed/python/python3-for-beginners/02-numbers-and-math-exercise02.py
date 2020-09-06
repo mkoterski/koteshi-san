@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Numbers and Math - Excercise 02:
+# Numbers and Math - Exercise 02:
 #
 # Let's assume you are planning to use your Python skills to build a social networking service.
 # You decide to host your application on servers running in the cloud. You pick a hosting provider

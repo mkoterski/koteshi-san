@@ -22,16 +22,16 @@
 
 # New attempt respecting the automatic extension of the speech bubble
 
-text = input('What does the cat say? ')
+text = input("What does the cat say? ")
 text_length = len(text)
 
-print('            {}'.format('_' * text_length))
-print('          < {} >'.format(text))
-print('            {}'.format('-' * text_length))
-print('          /')
-print(' /\_/\   /')
-print('( o.o )')
-print(' > ^ <')
+print("            {}".format("_" * text_length))
+print("          < {} >".format(text))
+print("            {}".format("-" * text_length))
+print("          /")
+print(" /\_/\   /")
+print("( o.o )")
+print(" > ^ <")
 
 # Output Result
 # What does the cat say? Meow
