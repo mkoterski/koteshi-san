@@ -14,7 +14,7 @@ print("           |" + "-" * 10 + "|")
 print("           | " + dataentry + " |")
 print("           |" + "-" * 10 + "|")
 print(" //////    |")
-print("( o.o )"  -)
+print("( o.o )  --")
 print(" > ^ <")
 print("")
 
