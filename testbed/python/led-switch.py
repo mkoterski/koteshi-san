@@ -24,7 +24,7 @@ def clear_screen():
         _ = system('clear') 
 # menu
 def menu():
-    setup()
+    #setup()
     clear_screen()
     print (50 * '-')
     print ("")
@@ -44,13 +44,13 @@ def menu():
             print ("LED turning on...")
             setup()
             GPIO.output(LedPin, GPIO.LOW)
-            #time.sleep(3)
+            time.sleep(3)
             menu()
     elif choice == 2:
             print ("LED turning off...")
             setup()
             GPIO.output(LedPin, GPIO.HIGH)
-            #time.sleep(3)
+            time.sleep(3)
             menu()
     elif choice == 3:
             print ("Shutting down program...")
