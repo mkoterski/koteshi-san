@@ -38,6 +38,13 @@ opex_week = weekly_hours * hosting_charge_hourly
 opex_month = monthly_hours * hosting_charge_hourly
 opex_year = annual_hours * hosting_charge_hourly
 
+opex_hourly_20 = hosting_charge_hourly * 20
+opex_day_20 = opex_day * 20
+opex_week_20 = opex_week * 20
+opex_month_20 = opex_month * 20
+opex_year_20 = opex_year * 20
+
+
 runtime = 918 % opex_day
 
 print("-" * 70)
@@ -58,7 +65,7 @@ print("{0:^9} | {1:^9} | {2:^9} | {3:^9} | {4:^9} | {5:^9}".format("server", "ho
 print("{0:^9} | {1:^9} | {1:^9} | {1:^9} | {1:^9} | {1:^9}".format("qty", "costs"))
 print("=" * 70)
 print("{0:>9} | {1:>9} | {2:>9} | {3:>9} | {4:>9} | {5:>9}".format("1", hosting_charge_hourly, opex_day, opex_week, opex_month, opex_year))
-print("{0:>9} | {1:>9} | {1:>9} | {1:>9} | {1:>9} | {1:>9}".format("20", (hosting_charge_hourly * 20), (opex_day * 20), opex_week * 20, opex_month * 20, opex_year * 20))
+print("{0:>9} | {1:>9} | {1:>9} | {1:>9} | {1:>9} | {1:>9}".format("20", hosting_charge_hourly_20, opex_day_20, opex_week_20, opex_month_20, opex_year_20))
 print("-" * 70)
 print("\nOne server can be run with EUR 981.00 for {} days.".format(int(runtime)))
 
