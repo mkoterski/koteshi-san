@@ -16,7 +16,7 @@
 
 # Object definition
 
-distance = input(int("How far would you like to travel in kilometers? "))
+distance = int(input("How far would you like to travel in kilometers? "))
 
 # if 
 if distance >= 3000:
