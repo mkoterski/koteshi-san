@@ -8,7 +8,7 @@
 # Updated: 2020-09-06
 # By:      Matthias Koterski
 
-dataentry = str(input("What does the cat say?"))
+dataentry = str(input("What does the cat say? "))
 print("")
 print("           |" + "-" * 10 + "|")
 print("           |   " + dataentry + " |")
