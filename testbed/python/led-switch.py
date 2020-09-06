@@ -12,13 +12,13 @@ LedPin = 27
 # define our clear function 
 def clear_screen(): 
 
-	# for windows 
-	if name == 'nt': 
-		_ = system('cls') 
+    # for windows 
+    if name == 'nt': 
+        _ = system('cls') 
 
-	# for mac and linux(here, os.name is 'posix') 
-	else: 
-		_ = system('clear') 
+    # for mac and linux(here, os.name is 'posix') 
+    else: 
+        _ = system('clear') 
 # menu
 def menu():
     setup()
@@ -50,7 +50,8 @@ def menu():
             menu()
     elif choice == 3:
             print ("Shutting down program...")
-            destroy()
+                clear_screen()
+                    destroy()
     else:    ## default ##
             print ("Invalid number. Try again...")
             time.sleep(2)
