@@ -39,10 +39,10 @@ opex_month = monthly_hours * hosting_charge_hourly
 opex_year = annual_hours * hosting_charge_hourly
 
 opex_hour_20 = hosting_charge_hourly * 20
-opex_day_20 = opex_day * 20
-opex_week_20 = opex_week * 20
-opex_month_20 = opex_month * 20
-opex_year_20 = opex_year * 20
+opex_day_20 = daily_hours * hosting_charge_hourly * 20
+opex_week_20 = weekly_hours * hosting_charge_hourly * 20
+opex_month_20 = monthly_hours * hosting_charge_hourly * 20
+opex_year_20 = annual_hours * hosting_charge_hourly * 20
 
 
 runtime = 918 % opex_day
