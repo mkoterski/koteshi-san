@@ -27,4 +27,5 @@ else:
 	print("I suggest you to walk your destination.")
 
 print("{}".format("¯\_(ツ)_/¯"))
+
 # Output
