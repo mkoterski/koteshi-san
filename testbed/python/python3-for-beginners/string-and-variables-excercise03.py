@@ -22,16 +22,16 @@
 
 # New attempt respecting the automatic extension of the speech bubble
 
-dataentry = input("What would you like the cat to say? ")
-text_length = len(dataentry)
-print('         {}'.format('_' * text_length))
-print('        < {} >'.format(text))
-print('         {}'.format('-' * text_length))
-print('        /')
-print(' /\_/\ /')
+text = input('What would you like the cat to say? ')
+text_length = len(text)
+
+print('            {}'.format('_' * text_length))
+print('          < {} >'.format(text))
+print('            {}'.format('-' * text_length))
+print('          /')
+print(' /\_/\   /')
 print('( o.o )')
 print(' > ^ <')
-
 
 # Output Result
 # Please enter something random: Hallo wie geht es dir?
