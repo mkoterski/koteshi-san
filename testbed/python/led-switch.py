@@ -7,7 +7,7 @@ import RPi.GPIO as GPIO
 import time
 
 # import only system from os 
-# from os import system, name 
+from os import system, name 
 
 # Set #27 as LED pin
 LedPin = 27
