@@ -11,7 +11,5 @@ dataentry = str(input("Please enter something random: "))
 print("You just entered: " + dataentry)
 
 # Output Result
-# Here is an animal, a vegetable, and a mineral.
-# Panda
-# Banana
-# Silver
+# Please enter something random: Hallo wie geht es dir?
+# You just entered: Hallo wie geht es dir?
