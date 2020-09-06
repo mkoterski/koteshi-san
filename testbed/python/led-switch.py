@@ -1,7 +1,17 @@
 #!/usr/bin/env python
-
-# val = input("Enter your value: ") 
-# print(val)
+# Simple LED switch script with menu
+# 
+# Last Update: 2020-09-06
+# Modified by: Matthias Koterski
+#
+# Change log: 
+# 
+# 0.1b - Added LED switch menu and smaller cosmetic changes such as a clear_screen function
+# 0.1a - Initial version. LED turns on and off every second.
+#
+# LED is connected to pin 24, with a 220 Ohm resistor connected to ground
+#
+################################################################################################################
 
 import RPi.GPIO as GPIO
 import time
@@ -24,7 +34,7 @@ def clear_screen():
         _ = system('clear') 
 # menu
 def menu():
-    #setup()
+    #setup() # calling setup() would reset the LED status to OFF
     clear_screen()
     print (50 * '-')
     print ("")
@@ -69,22 +79,8 @@ def setup():
     # and initial level to High(3.3v)
     GPIO.setup(LedPin, GPIO.OUT, initial=GPIO.HIGH)
 
-# Define a main function for main process
-# def main():
-#     # Print messages
-#         print_message()
-#     while True:
-#         print('LED ON')
-#         # Turn on LED
-#         GPIO.output(LedPin, GPIO.LOW)
-#         time.sleep(0.5)
-#         print('LED OFF')
-#         # Turn off LED
-#         GPIO.output(LedPin, GPIO.HIGH) 
-#         time.sleep(0.5)
+# Define a destroy function for clean up everything afterwards
 
-# Define a destroy function for clean up everything after
-# the script finished 
 def destroy():
     # Turn off LED
     GPIO.output(LedPin, GPIO.HIGH)
