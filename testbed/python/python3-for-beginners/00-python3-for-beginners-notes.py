@@ -126,7 +126,7 @@ input()    Accepts Standard Input
 input("Prompt to display")
 
 fruit = input("Enter a name of a Fruit: ")
-print("{} is a lovely fruit."format(fruit))
+print("{} is a lovely fruit.".format(fruit))
 
 >>> Name a fruit: apple
     apple is a lovely fruit.

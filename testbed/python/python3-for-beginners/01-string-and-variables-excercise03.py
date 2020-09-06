@@ -34,5 +34,11 @@ print('( o.o )')
 print(' > ^ <')
 
 # Output Result
-# Please enter something random: Hallo wie geht es dir?
-# You just entered: Hallo wie geht es dir?
+# What does the cat say? Meow
+#             ____
+#           < Meow >
+#             ----
+#           /
+#  /\_/\   /
+# ( o.o )
+#  > ^ <
