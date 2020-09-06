@@ -155,6 +155,70 @@ Summary
 
 
 
+N U M B E R S   A N D   M A T H
+
+Numbers do not use quotation marks
+
+int = 42  # integer
+float = 1.23   # floating point
+
+SYMBOL OPERATION     
++      add
+-      subtract
+*      multiply
+/      divide        # performs floating point operation and returns floating point value
+**     exponentiate  # 2 ** 5 means 2 * 2 * 2 * 2 * 2 "2 raised by the power of 5"
+%      modulo        # 3 % 2 = 1 means 3 divided by 2 leaves 1 remaining
+                     # 4 % 2 = 0  means 4 divided by 2 leaves 0 remaining
+                     # returns the remainder
+
+Divisions performs floating point operations and returns floating point values
+8 / 2 = 4.0
+
+Operations with floating point values return floating point results
+1 + 2.0 = 3.0
+
+
+Strings and Numbers
+
+Convert strings to integers
+int()
+
+Example:
+quantity_string = "3"
+total = int(quantity_string) + 2 # without int() this would result in an error as 3 is a string due to "" marks
+print(total)
+
+>>> 5
+
+Convert strings or integers to floating points
+float()
+
+Example:
+meters = "3"
+total = float(meters) # float() add decimals
+print(total)
+
+>>> 3.0
+
+Summary
+- Unlike strings, numbers require no special decoration
+- If you enclose a number with quotation marks, it will become a string
+- To convert a string to to an integer, use the int() function
+- To convert a string to to a float, use the float() function
+- Single line comments begin with #
+- Multi-line comments begin and end with (""")
+- 
+
+
+
+
+
+
+
+
+
+
 
 
 

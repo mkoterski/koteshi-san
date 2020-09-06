@@ -22,7 +22,7 @@
 
 # New attempt respecting the automatic extension of the speech bubble
 
-text = input('What would you like the cat to say? ')
+text = input('What does the cat say? ')
 text_length = len(text)
 
 print('            {}'.format('_' * text_length))
