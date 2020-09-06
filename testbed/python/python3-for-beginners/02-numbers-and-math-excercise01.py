@@ -39,3 +39,16 @@ print("OPEX / week : {}".format(str(opex_week)))
 print("OPEX / month : {}".format(str(opex_month)))
 print("OPEX / year : {}".format(str(opex_year)))
 print("-" * 30)
+
+# Output
+# ------------------------------
+#  The Social Network
+# ------------------------------
+# Server(s) : 1
+# Charge/hour : 0.51
+# ==============================
+# OPEX / day : 12.24
+# OPEX / week : 85.68
+# OPEX / month : 367.2
+# OPEX / year : 4467.6
+# ------------------------------
