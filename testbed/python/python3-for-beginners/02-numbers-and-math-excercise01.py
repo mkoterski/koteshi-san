@@ -28,13 +28,14 @@ opex_week = weekly_hours * hosting_charge_hourly
 opex_month = monthly_hours * hosting_charge_hourly
 opex_year = annual_hours * hosting_charge_hourly
 
-print("=" * 30)
+print("-" * 30)
 print(" The Social Network")
-print("=" * 30)
+print("-" * 30)
 print("Server(s) : {}".format(str(server_qty)))
 print("Charge/hour : {}".format(str(hosting_charge_hourly)))
 print("=" * 30)
 print("OPEX / day : {}".format(str(opex_day)))
-print("OPEX / week : {:.3f}".format(str(opex_week)))
+print("OPEX / week : {}".format(str(opex_week)))
 print("OPEX / month : {}".format(str(opex_month)))
-print("OPEX / year : {:.2f}".format(str(opex_year)))
+print("OPEX / year : {}".format(str(opex_year)))
+print("-" * 30)
