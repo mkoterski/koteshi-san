@@ -6,9 +6,9 @@
 # followed by vegetable, and finally mineral. Each one of the values should be printed on their
 # own line. Your program will display four lines in total.
 
-# Created:
-# Updated:
-# By:
+# Created: 2020-09-06
+# Updated: 2020-09-06
+# By:      Matthias Koterski
 
 animal = "Panda"
 vegetable = "Banana"
@@ -18,3 +18,9 @@ print("Here is an animal, a vegetable, and a mineral.")
 print(animal)
 print(vegetable)
 print(mineral)
+
+# Output Result
+# Here is an animal, a vegetable, and a mineral.
+# Panda
+# Banana
+# Silver
