@@ -1,4 +1,4 @@
-# Strings and Variables - Excercise 01:
+# Strings and Variables - Exercise 01:
 #
 # Write a Python program that uses three variables. The variables in your program will be animal,
 # vegetable, and mineral. Assign a string value to each one of the variables. Your program should

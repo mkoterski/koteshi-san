@@ -1,4 +1,4 @@
-# Strings and Variables - Excercise 02:
+# Strings and Variables - Exercise 02:
 #
 # Write a Python program that prompts the user for input and simply repeats what the user
 # entered.

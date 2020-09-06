@@ -56,17 +56,20 @@ print("=" * 70)
 print("{0:>9} | {1:>9} | {2:>9.2f} | {3:>9.2f} | {4:>9.2f} | {5:>9.2f}".format("1", hosting_charge_hourly, opex_day, opex_week, opex_month, opex_year))
 print("{0:>9} | {1:>9} | {2:>9.2f} | {3:>9.2f} | {4:>9.2f} | {5:>9.2f}".format("20", hosting_charge_hourly * 20, opex_day * 20, opex_week * 20, opex_month * 20, opex_year * 20))
 print("-" * 70)
-print("\nOne server can be run with EUR 981.00 for {} days.".format(int(runtime)))
+print("\nOne server can be run with EUR 981.00 for {} days.\n".format(int(runtime)))
 
 # Output
-# ------------------------------
-#  The Social Network
-# ------------------------------
-# Server(s) : 1
-# Charge/hour : 0.51
-# ==============================
-# OPEX / day : 12.24
-# OPEX / week : 85.68
-# OPEX / month : 367.2
-# OPEX / year : 4467.6
-# ------------------------------
+# ----------------------------------------------------------------------
+#
+#                         The Sillycube Network                         
+#
+# ----------------------------------------------------------------------
+#  server   |  hourly   |   daily   |  weekly   |  monthly  |  annual  
+#    qty    |   costs   |   costs   |   costs   |   costs   |   costs  
+# ======================================================================
+#         1 |      0.51 |     12.24 |     85.68 |    367.20 |   4467.60
+#        20 |      10.2 |    244.80 |   1713.60 |   7344.00 |  89352.00
+# ----------------------------------------------------------------------
+#
+# One server can be run with EUR 981.00 for 12 days.
+#

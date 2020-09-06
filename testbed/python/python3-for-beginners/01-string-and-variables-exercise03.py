@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Strings and Variables - Excercise 03:
+# Strings and Variables - Exercise 03:
 #
 # Write a Python program that prompts for input and displays a cat "saying" what was provided by
 # the user. Place the input provided by the user inside a speech bubble. Make the speech bubble

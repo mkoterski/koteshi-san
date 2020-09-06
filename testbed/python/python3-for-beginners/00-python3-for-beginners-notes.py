@@ -207,27 +207,173 @@ Summary
 - To convert a string to to an integer, use the int() function
 - To convert a string to to a float, use the float() function
 - Single line comments begin with #
-- Multi-line comments begin and end with (""")
-- 
+- Multi-line comments begin with (""") and end with (""")
 
 
 
+B O O L E A N S   A N D   C O N D I T I O N A L S
+
+Boolean
+- Can only be True or False
+a_boolean = True
+the_other_boolean = False
+print(a_boolean)
+print(the_other_boolean)
+
+>>> True
+    False
+
+Comparators:
+
+OPERATOR   DESCRIPTION
+==         equal to
+>          greater than
+>=         greater than or equal
+<          less than     
+<=         less than or equal
+!=         not equal
+
+>>> 1 == 2
+    False
+
+>>> 1 > 2
+    False
+
+>>> 1 >= 2
+    False
+
+>>> 1 < 2
+    True
+
+>>> 1 <= 2
+    True
+
+>>> 1 != 2
+    True
 
 
+Boolean Operators:
+
+OPERATOR   DESCRIPTION     
+and        Evaluates to True if both statements are true, otherwise evaluates to False
+or         Evaluates to True if either of the statements is True, otherwise evaluates to False
+not        Evaluates to the opposite of the statement
+
+>>> 37 > 29
+    True
+
+>>> 37 < 42
+    True
+
+>>> 37 > 29 and 37 < 42 # both statements are true therefore the result is True
+    True
+
+>>> 37 > 29 or 37 < 42 # if one statement is True the result is True
+                       # both statements are true therefore the result is True
+    True
+
+>>> not 37 > 29 # While 37 > 29 is True, not evaluates to the opposite statement
+    False
 
 
+Order of Operations for Booleans
+not
+and
+or
+
+# This is True
+True and False or not False
+True and False or True
+False or True
 
 
+Controlling the Order of Operations
+
+Anything surrounded by parenthesis is evaluated first and as its own unit.
+
+# These are the same
+True and False or not False
+(True and False) or (not False)
+((True and False) or (not False))
 
 
+Conditionals
+
+>>> if 37 < 40:
+	    print("Thirty-seven is less than 40.") # Pay attention at indentation
+    Thirty-seven is less than 40.
 
 
+Code Blocks
+
+Block One
+    Block Two
+    Block Two
+        Block Three
+Block One
+Block One
+
+# Remember those 
+IndentationError: expected an indented block
 
 
+The if Statement
+
+Example 1:
+>>> age = 31
+    if age >= 35:
+	    print("You are old enough to be US president")
 
 
+    print("Have a nice day.")
+    Have a nice day.
 
 
+Example 2:
+>>> age = 31
+    if age >= 35:
+	    print("You are old enough to be US president.")
+	else:
+		print("You are NOT old enough to be US president.")
+
+
+    print("Have a nice day.")
+    You are NOT old enough to be US president.
+    Have a nice day.
+
+
+Example 3:
+>>> age = 31
+    if age >= 35:
+	    print("You are old enough to be a US Senator or the US President.")
+	elif age >= 30:
+		print("You are old enough to be a US Senator.")
+	else:
+		print("You are NOT old enough to be a US Senator or the US President.")
+
+
+    print("Have a nice day.")
+    
+	You are old enough to be a US Senator.
+    Have a nice day.
+
+
+Example 4:
+>>> age = 99
+    if age >= 35:
+	    print("You are old enough to be a US Representative, a US Senator or the US President.")
+	elif age >= 30:
+		print("You are old enough to be a US Senator.")
+	elif age >= 25:
+		print("You are old enough to be a US Representative.")
+	else:
+		print("You are NOT old enough to be a US Representative, a US Senator or the US President.")
+
+
+    print("Have a nice day.")
+    
+	You are old enough to be a US Representative, a US Senator or the US President.
+    Have a nice day.
 
 
 
