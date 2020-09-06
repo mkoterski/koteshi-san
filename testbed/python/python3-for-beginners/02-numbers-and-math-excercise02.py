@@ -60,7 +60,7 @@ print("=" * 70)
 print("{0:>9} | {1:>9.2} | {2:>9.2} | {3:>9.2} | {4:^9.2} | {5:^9.2}".format("1", hosting_charge_hourly, opex_day, opex_week, opex_month, opex_year))
 print("{0:>9} | {1:>9.2} | {1:>9.2} | {1:>9.2} | {1:^9.2} | {1:^9.2}".format("20", hosting_charge_hourly * 20, opex_day * 20, opex_week * 20, opex_month * 20, opex_year * 20))
 print("-" * 70)
-print("\nOne server can be run with EUR 981.00 for {} days.".format(str(runtime)))
+print("\nOne server can be run with EUR 981.00 for {.0} days.".format(runtime))
 
 # print("{0:9} | {1:<8.2}".format("Apples", 0.87123))
 # print("{0:9} | {1:<8.2}".format("Oranges", 1))
