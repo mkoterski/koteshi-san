@@ -56,7 +56,10 @@ print("OPEX - 1 server / month : {}".format(str(opex_month)))
 print("OPEX - 1 server / year : {}".format(str(opex_year)))
 print("-" * 30)
 
-print("{0:^9} | {1:^9} | {1:^9} | {1:^9} | {1:^9} | {1:^9} | {1:^9}".format("Server", "hourly", ))
+print("{0:^9} | {1:^9} | {1:^9} | {1:^9} | {1:^9} | {1:^9}".format("server", "hourly", "daily", "weekly", "monthly", "annual"))
+print("{0:^9} | {1:^9} | {1:^9} | {1:^9} | {1:^9} | {1:^9}".format("qty", "costs", "costs", "costs", "costs", "costs"))
+print("-" * 40)
+
 # print("{0:9} | {1:<8.2}".format("Apples", 0.87123))
 # print("{0:9} | {1:<8.2}".format("Oranges", 1))
 
