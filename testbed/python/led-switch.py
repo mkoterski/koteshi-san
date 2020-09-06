@@ -50,8 +50,8 @@ def menu():
             menu()
     elif choice == 3:
             print ("Shutting down program...")
-                clear_screen()
-                    destroy()
+            clear_screen()
+            destroy()
     else:    ## default ##
             print ("Invalid number. Try again...")
             time.sleep(2)
