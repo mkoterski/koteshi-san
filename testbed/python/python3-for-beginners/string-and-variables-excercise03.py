@@ -8,15 +8,26 @@
 # Updated: 2020-09-06
 # By:      Matthias Koterski
 
+# Original attempt
+# dataentry = str(input("What does the cat say? "))
+# print("")
+# print("           |" + "-" * 10 + "|")
+# print("           |   " + dataentry + " |")
+# print("           |" + "-" * 10 + "|")
+# print(" /---.     |")
+# print("( o.o )  --")
+# print(" > ^ <")
+# print("")
+
+# New attempt respecting the automatic extension of the speech bubble
 dataentry = str(input("What does the cat say? "))
-print("")
-print("           |" + "-" * 10 + "|")
-print("           |   " + dataentry + " |")
-print("           |" + "-" * 10 + "|")
+text_length = len(dataentry)
+print("           {}".format("_" * text_length))
+print("          <  {} ".format(dataentry)
+print("           {}".format("_" * text_length))
 print(" /---.     |")
 print("( o.o )  --")
 print(" > ^ <")
-print("")
 
 
 # Output Result
