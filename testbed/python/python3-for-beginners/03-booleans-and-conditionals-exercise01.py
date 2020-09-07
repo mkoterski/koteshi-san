@@ -29,3 +29,6 @@ else:
 print("{}".format("¯\_(ツ)_/¯"))
 
 # Output
+# How far would you like to travel in kilometers? 123
+# I suggest you to drive to your destination.
+# ¯\_(ツ)_/¯
