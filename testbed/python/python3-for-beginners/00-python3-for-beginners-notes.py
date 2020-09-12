@@ -377,6 +377,155 @@ Example 4:
 
 
 
+F U N C T I O N S
 
+Functions - Part I
+
+Functions
+- Dry = Don't Repeat Yourself
+- Write one time, use many times
+- what has been defined, has to be called
+- Define your functions at the top of your programm
+
+>>> def function_name():
+        # Code Block
+
+>>> def say_hi(): # defines function
+        print("Hi!")
+
+    say_hi() # calls function
+
+
+    Hi!
+
+>>> def say_hi(name): # defines function with parameter "name"
+        print("Hi {}!".format(name))
+
+    say_hi("Jayson") # calls function
+    say_hi("everybody") # calls function with everybody applied to name parameter
+
+
+    Hi Jayson!
+    Hi everybody!
+
+>>> def say_hi(name): # defines function
+        print("Hi {}!".format(name))
+
+    say_hi() # calls function without parameter "name"
+    
+
+    Error
+    TypeError: say_hi() missing 1 required positional argument 'name'
+
+>>> def say_hi(name = "there"): # defines function with parameter "name"
+        print("Hi {}!".format(name))
+
+    say_hi() # calls function without parameter value, therefore defaults to value "there"
+    say_hi("Jayson") # calls function with "Jayson" applied to "name" parameter
+
+
+    Hi there!
+    Hi Jayson!
+
+>>> def say_hi(first, last):
+        print("Hi {} {}!".format(first, last))
+
+    say_hi("Candice", "Yang")
+    
+
+    Hi Candice Yang!
+
+>>> def say_hi(first, last): # We define here the parameter order
+        print("Hi {} {}!".format(first, last))
+
+    say_hi(first = "Candice", last = "Yang")
+    say_hi(last = "Koterski", last = "Matthias") # Definition order doesn't matter since the we pre-
+                                                 # defined the order when we define the function
+
+    Hi Candice Yang!
+    Hi Matthias Koterski!
+
+>>> def say_hi(first, last = "Yang"): # "last" default value is "Yang" unless overwritten by function call parameters
+        print("Hi {} {}!".format(first, last))
+
+    say_hi("Candice")
+    say_hi("Matthias", "Koterski")
+
+
+    Hi Candice Yang!
+    Hi Matthias Koterski!
+
+
+
+
+
+
+
+
+Functions - Part II
+
+Functions
+doc strings are notes which can we parsed by help() and should tell you about the function's purpose
+
+>>> def odd_or_even(number):
+        """ Determine if the number is odd or even """
+        if number % 2 == 0:
+            return "even"
+        else:
+            return "odd"
+
+
+    odd_or_even_string = odd_or_even(7)
+    print(odd_or_even_string)
+
+>>> def is_odd(number):
+        """ Determine if the number is odd """
+        if number % 2 = 0:
+            return False
+        else:
+            return True
+
+    print(is_odd(7))
+
+
+    True
+
+>>> def get_name():
+        name = input("What is your name? ")
+        return name
+
+    def say_name(name):
+        print("Your name is {}.".format(name))
+
+    def get_and_say_name():
+        """ Get and display name """
+        name = get_name()
+        say_name(name)
+
+    get_and_say_name()
+
+
+    What is your name? Matthias
+    Your name is Matthias.
+
+Summary
+- A function is a block of reuseable code that performs and action
+  and can optionally return data.
+- A function must be defined before it is called.
+- The basic syntax for defining a function is:
+
+def function_name(parameter_name):
+
+- A function can accept parameters. To make a parameter optional, supply a default value for that parameter
+- You can supply a docstring as the first line of your function
+- The return statement exits the function and passes back what follows return.
+- Use the built-in help() function to get help with an object. When supplying a function
+  to help() the docstring contained within the function is displayed.
+
+
+
+L I S T S
+
+Lists
 
 
