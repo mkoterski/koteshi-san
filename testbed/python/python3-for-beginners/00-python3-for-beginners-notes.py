@@ -527,5 +527,32 @@ def function_name(parameter_name):
 L I S T S
 
 Lists
+- A list is a data type that can hold an ordered collection of items
+- The items can be of various data types
+- You can even have lists of lists
+
+Creating Lists
+
+list_name = [item_1, item_2, item_N]    # Creates a list with items
+list_name = []                          # Creates empty list
+list_name[index]                        # index#0 is the first item
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

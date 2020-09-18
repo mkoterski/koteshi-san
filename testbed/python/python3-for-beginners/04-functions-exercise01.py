@@ -81,6 +81,10 @@ create_story()
 # A Sausage met his friend, the crocodile. They wanted to run. But in the end they were way too fast.
 
 
+
+
+
+
 # def get_word(word_type):
 #     """Get a word from a user and return that word."""
 
