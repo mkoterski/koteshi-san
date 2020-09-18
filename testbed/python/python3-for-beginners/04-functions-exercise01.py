@@ -71,7 +71,14 @@ def create_story():
 create_story()
 
 
+# Output
+# matthias@Candices-MBP python3-for-beginners % python3 04-functions-exercise01.py
+# Please enter a/an noun: Sausage
+# Please enter a/an verb: run
+# Please enter a/an adjective: fast
+# Here is your creation: 
 
+# A Sausage met his friend, the crocodile. They wanted to run. But in the end they were way too fast.
 
 
 # def get_word(word_type):
