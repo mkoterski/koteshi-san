@@ -1,0 +1,4 @@
+minimalistic design approach
+2-3 colours max
+easy to replicate as ASCII art for MOTD
+koteshi-san is your friendly gardener
