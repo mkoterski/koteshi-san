@@ -538,21 +538,113 @@ list_name = []                          # Creates empty list
 list_name[index]                        # index#0 is the first item
 
 
+>>> animal = ["man", "bear", "pig"]
+    print(animal[0])
+    print(animal[1])
+    print(animal[2])
+
+    man
+    bear
+    pig
+
+>>> animals = ["man", "bear", "pig"]
+    print(animals[0])
+    animals[0] = "cat"
+    print(animals[0])
+
+    man
+    cat
+
+>>> animals = ["man", "bear", "pig"]
+    print(animals[-1])  #negative index represents the last item in the list
+    print(animals[-2])
+    print(animals[-3])
+
+    pig
+    bear
+    man
+
+>>> animals = ["man", "bear", "pig"]
+    animals.append("cow") # append method adds single additional item to the list
+    print(animals[-1])
+
+    cow
+
+>>> animals = ["man", "bear", "pig"]
+    animals.extend(["cow", "duck"])
+    print(animals)
+
+    more_animals = ["horse", "dog"]
+    animals.extend(more_animals)
+    print animals
+
+    ["man", "bear", "pig", "cow", "duck"]
+    ["man", "bear", "pig", "cow", "duck", "horse", "dog"]
+
+>>> animals = ["man", "bear", "pig"]
+    animals.insert(0, "horse") # "horse" will be added at the first position, hence index no. 0
+    print(animals)
+
+    animals.insert(2, "duck") # "dock" will be added at the third position, hence index no. 2
+    print(animals)
+
+    ["horse", "man", "bear", "pig"]
+    ["horse", "man", "duck", "bear", "pig"]
 
 
+Slices # accessing a portion of a list
+
+list[index1:index2] # slice goes up to, but does not include, the last index)
+list[:index2]
+list[index1:]
 
 
+>>> animals = ["man", "bear", "pig", "cow", "duck", "horse"]
+    
+    some_animals = animals[1:4]
+    print("Some animals:         {}".format(some_animals))
+
+    first_two = animals[0:2]
+    print("First two animals are:      {}".format(first_two))
+
+    first_two_again = animals[:2]
+    print("First two animals are:      {}".format(first_two_again))
 
 
+    Some animals:         ["bear", "pig", "cow"]
+    First two animals are:      ["man", "bear"]
+    First two animals are:      ["man", "bear"]
 
 
+>>> animals = ["man", "bear", "pig", "cow", "duck", "horse"]
+    last_two = animals[4:6]
+    print("The last two animals are {}".format(last_two))
+
+    last_two_again = animals[-2:]
+    print("The last two animals are {}".format(last_two_again))    
 
 
+    The last two animals are ["duck", "horse"]
+    The last two animals are ["duck", "horse"]
 
 
+String Slices
+
+>>> part_of_a_horse = "horse"[1:3]
+    print(part_of_a_horse)
+
+    or
 
 
+Finding an item in a list
+
+>>> animals = ["man", "bear", "pig"]
+    bear_index = animals.index("bear")
+    print(bear_index)
+
+    1
 
 
+Exceptions
 
 
