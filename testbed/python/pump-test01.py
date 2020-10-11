@@ -13,6 +13,26 @@
 ################################################################################################################
 
 
+# Deactivate error warnings
+# GPIO.setwarnings(False)
+
+
+# To discover information about your RPi:
+
+# GPIO.RPI_INFO
+
+# To discover the Raspberry Pi board revision:
+
+# GPIO.RPI_INFO['P1_REVISION']
+
+# To discover the version of RPi.GPIO:
+
+# GPIO.VERSION
+
+
+
+
+
 import RPi.GPIO as GPIO
 import time
 
@@ -39,10 +59,10 @@ def menu():
     print (50 * '-')
     print ("")
     print ("           P U M P   T E S T   0.1 \n")
-    print ("ensure that the LED is connected to GPIO27\n")
+    print ("Ensure that the pump is connected to XXXXXXXX\n")
     print (50 * '-')
-    print ("1 - LED ON")
-    print ("2 - LED OFF")
+    print ("1 - PUMP ON")
+    print ("2 - PUMP OFF")
     print ("3 - Close program")
     print (50 * '-')
      
