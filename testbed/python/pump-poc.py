@@ -1,5 +1,3 @@
-pump-poc.py
-
 import RPi.GPIO as GPIO       	# Import required Python libraries
 import time
 GPIO.setwarnings(False)
@@ -18,4 +16,3 @@ while True:
 		myButton1=Button(text='on',fg='black',bg='green',command=onlamp).pack()
 		myButton2=Button(text='off',fg='black',bg='green',command=offlamp).pack()
 		myGui.mainloop()
-	
