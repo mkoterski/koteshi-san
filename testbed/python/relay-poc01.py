@@ -55,7 +55,7 @@ def menu():
     print (55 * '-')
      
     # Get input and convert str to int
-    choice = int(input("\nEnter your choice [1-3] : "))
+    choice = int(input("\nEnter your choice [1-9] : "))
      
     ### Take action as per selected menu-option ###
     if choice == 1:
