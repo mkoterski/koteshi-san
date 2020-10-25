@@ -88,7 +88,6 @@ def setup():
     # Set pin layout to BOARD instead of BCM so that the code can be easily reused
 	GPIO.setmode(GPIO.BOARD)
 	# Set pin to No. 7 (GPIO4), to output, and initial level to High (3.3v/5v) depending on which pin connected.
-    #GPIO.setup(RelayPin, GPIO.OUT, initial=GPIO.HIGH)
 	GPIO.setup(7,GPIO.OUT,initial=GPIO.HIGH)   
 
 
