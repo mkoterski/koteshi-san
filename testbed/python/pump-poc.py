@@ -3,7 +3,7 @@ import time
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BOARD)
 GPIO.setup(7,GPIO.OUT)
-from Tkinter import*
+from tkinter import*
 myGui=Tk()
 while True:
 	def onlamp():
