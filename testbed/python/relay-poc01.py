@@ -9,20 +9,18 @@
 # 0.1b - Relay is off when programm is started and can be switched.
 # 0.1a - Initial WIP version.
 #
-# Relay is connected to pin 7 (GPIO4)
-#
 # Requirements:
 # 1. Raspberry Pi B+ model
 # 2. Relay controller
 # 3. Water pump
 #
 # Working Instructions:
-# Step 1: Connect any voltage pin from Raspberry Pi to Relay.
-# Step 2:Connect any ground pin from Raspberry pi to Relay.
-# Step 3: Connect any GPIO pin to Relay module (In this project I used pin 7(GPIO4)).
+# Step 1: Connect any voltage pin from Raspberry Pi to Relay. Pay attention whether your relay requires 3.3 or 5V.
+# Step 2: Connect any ground pin from Raspberry pi to Relay.
+# Step 3: Connect GPIO pin 7 to Relay module.
 # Step 4: Open terminal and execute the program we provided below.
 #
-################################################################################################################
+####################################################################################################################
 
 import RPi.GPIO as GPIO
 import time
@@ -31,8 +29,7 @@ from os import system, name # import only system from os
 
 GPIO.setwarnings(False) # Deactivate warning messages
 
-
-# define our clear function 
+# define clear screen function 
 def clear_screen(): 
 
     # for windows 
@@ -46,15 +43,15 @@ def clear_screen():
 def menu():
     #setup() # calling setup() would reset the LED status to OFF
     clear_screen()
-    print (50 * '-')
+    print (55 * '-')
     print ("")
-    print ("           R E L A Y   T E S T   0.1 \n")
+    print ("              R E L A Y   T E S T   0.1 \n")
     print ("Ensure that the relay is connected to GPIO4 (pin #7)\n")
-    print (50 * '-')
-    print ("1 - RELAY ON")
-    print ("2 - RELAY OFF")
+    print (55 * '-')
+    print ("1 - Turns RELAY ON for 3 seconds")
+    print ("2 - Turns RELAY OFF for 3 seconds")
     print ("3 - Close program")
-    print (50 * '-')
+    print (55 * '-')
      
     # Get input and convert str to int
     choice = int(input('Enter your choice [1-3] : '))
