@@ -24,29 +24,13 @@
 #
 ################################################################################################################
 
-# To discover information about your RPi:
-# GPIO.RPI_INFO
-
-# To discover the Raspberry Pi board revision:
-# GPIO.RPI_INFO['P1_REVISION']
-
-# To discover the version of RPi.GPIO:
-# GPIO.VERSION
-
 import RPi.GPIO as GPIO
 import time
 
+from os import system, name # import only system from os 
 
-# import only system from os 
-from os import system, name 
+GPIO.setwarnings(False) # Deactivate warning messages
 
-
-#GPIO.setwarnings(False) # Deactivate warning messages
-#GPIO.setmode(GPIO.BOARD) # Set pin layout to BOARD instead of BCM
-
-
-# Set #7 (GPIO4) as relay pin
-#RelayPin = 7
 
 # define our clear function 
 def clear_screen(): 
@@ -67,8 +51,8 @@ def menu():
     print ("           R E L A Y   T E S T   0.1 \n")
     print ("Ensure that the relay is connected to GPIO4 (pin #7)\n")
     print (50 * '-')
-    print ("1 - Relay ON")
-    print ("2 - Relaf OFF")
+    print ("1 - RELAY ON")
+    print ("2 - RELAY OFF")
     print ("3 - Close program")
     print (50 * '-')
      
@@ -79,14 +63,14 @@ def menu():
     if choice == 1:
             print ("Relay turning on...")
             setup()
-            GPIO.output(7,True)
+            GPIO.output(7,False)
             #GPIO.output(RelayPin, GPIO.LOW)
             time.sleep(3)
             menu()
     elif choice == 2:
             print ("Relay turning off...")
             setup()
-            GPIO.output(7,False)
+            GPIO.output(7,True)
             #GPIO.output(RelayPin, GPIO.HIGH)
             time.sleep(3)
             menu()
@@ -101,19 +85,17 @@ def menu():
 
 # Define a setup function for some setup
 def setup():
-    # Set the GPIO modes to BOARD numbering so that the code can be easily reused
-	GPIO.setmode(GPIO.BOARD) # Set pin layout to BOARD instead of BCM
-	GPIO.setup(7,GPIO.OUT)   # Set pin to No. 7 (GPIO4)
-#    GPIO.setmode(GPIO.BCM)
-    # Set RelayPin's mode to output, and initial level to High(3.3v)
+    # Set pin layout to BOARD instead of BCM so that the code can be easily reused
+	GPIO.setmode(GPIO.BOARD)
+	# Set pin to No. 7 (GPIO4), to output, and initial level to High (3.3v/5v) depending on which pin connected.
     #GPIO.setup(RelayPin, GPIO.OUT, initial=GPIO.HIGH)
+	GPIO.setup(7,GPIO.OUT,initial=GPIO.False)   
+
 
 # Define a destroy function for clean up everything afterwards
-
 def destroy():
     # Turn off Relay
     GPIO.output(7,False)
-    # GPIO.output(RelayPin, GPIO.HIGH)
     # Release resource
     GPIO.cleanup()                     
 
