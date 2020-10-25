@@ -6,6 +6,7 @@
 #
 # Change log: 
 # 
+# 0.1b - Relay is off when programm is started and can be switched.
 # 0.1a - Initial WIP version.
 #
 # Relay is connected to pin 7 (GPIO4)
@@ -45,7 +46,7 @@ from os import system, name
 
 
 # Set #7 (GPIO4) as relay pin
-RelayPin = 7
+#RelayPin = 7
 
 # define our clear function 
 def clear_screen(): 
