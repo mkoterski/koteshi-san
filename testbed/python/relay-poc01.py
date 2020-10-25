@@ -49,10 +49,8 @@ def menu():
     print ("Ensure that the relay is connected to GPIO4 (pin #7)\n")
     print (55 * '-')
     print ("1 - Turns RELAY ON for 3 seconds")
-    print ("2 - Turns RELAY OFF for 3 seconds")
-    print ("")
-    print ("5 - Turns RELAY ON for 10 seconds")
-    print ("")
+    print ("2 - Turns RELAY OFF for 3 seconds\n")
+    print ("5 - Turns RELAY ON for 10 seconds\n")
     print ("9 - Close program")
     print (55 * '-')
      
