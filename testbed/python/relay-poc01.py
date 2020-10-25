@@ -62,19 +62,19 @@ def menu():
             print ("Relay turning on for 3 seconds...")
             setup()
             GPIO.output(7,False)
-            time.sleep(3)
+            time.sleep(4)
             menu()
     elif choice == 2:
             print ("Relay turning off...")
             setup()
             GPIO.output(7,True)
-            time.sleep(3)
+            time.sleep(2)
             menu()
     elif choice == 5:
             print ("Relay turning on for 10 seconds...")
             setup()
             GPIO.output(7,False)
-            time.sleep(10)
+            time.sleep(11)
             menu()
     elif choice == 9:
             print ("Shutting down program...")
