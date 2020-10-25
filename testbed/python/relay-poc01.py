@@ -50,28 +50,35 @@ def menu():
     print (55 * '-')
     print ("1 - Turns RELAY ON for 3 seconds")
     print ("2 - Turns RELAY OFF for 3 seconds")
-    print ("3 - Close program")
+    print ("")
+    print ("5 - Turns RELAY ON for 10 seconds")
+    print ("")
+    print ("9 - Close program")
     print (55 * '-')
      
     # Get input and convert str to int
     choice = int(input("\nEnter your choice [1-3] : "))
      
-    # Take action as per selected menu-option ###
+    ### Take action as per selected menu-option ###
     if choice == 1:
-            print ("Relay turning on...")
+            print ("Relay turning on for 3 seconds...")
             setup()
             GPIO.output(7,False)
-            #GPIO.output(RelayPin, GPIO.LOW)
             time.sleep(3)
             menu()
     elif choice == 2:
             print ("Relay turning off...")
             setup()
             GPIO.output(7,True)
-            #GPIO.output(RelayPin, GPIO.HIGH)
             time.sleep(3)
             menu()
-    elif choice == 3:
+    elif choice == 5:
+            print ("Relay turning on for 10 seconds...")
+            setup()
+            GPIO.output(7,False)
+            time.sleep(10)
+            menu()
+    elif choice == 9:
             print ("Shutting down program...")
             clear_screen()
             destroy()
