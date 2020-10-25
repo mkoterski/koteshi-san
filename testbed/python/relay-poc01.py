@@ -42,7 +42,7 @@ from os import system, name
 
 #GPIO.setwarnings(False) # Deactivate warning messages
 #GPIO.setmode(GPIO.BOARD) # Set pin layout to BOARD instead of BCM
-GPIO.setup(7,GPIO.OUT)   # Set pin to No. 7 (GPIO4)
+
 
 # Set #7 (GPIO4) as relay pin
 RelayPin = 7
@@ -102,7 +102,7 @@ def menu():
 def setup():
     # Set the GPIO modes to BOARD numbering so that the code can be easily reused
 	GPIO.setmode(GPIO.BOARD) # Set pin layout to BOARD instead of BCM
-
+	GPIO.setup(7,GPIO.OUT)   # Set pin to No. 7 (GPIO4)
 #    GPIO.setmode(GPIO.BCM)
     # Set RelayPin's mode to output, and initial level to High(3.3v)
     #GPIO.setup(RelayPin, GPIO.OUT, initial=GPIO.HIGH)
