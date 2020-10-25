@@ -110,7 +110,8 @@ def setup():
 
 def destroy():
     # Turn off Relay
-    GPIO.output(RelayPin, GPIO.HIGH)
+    GPIO.output(7,False)
+    # GPIO.output(RelayPin, GPIO.HIGH)
     # Release resource
     GPIO.cleanup()                     
 
