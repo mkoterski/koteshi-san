@@ -6,6 +6,7 @@
 #
 # Change log: 
 # 
+# 0.1c - added colours class
 # 0.1b - Relay is off when programm is started and can be switched.
 # 0.1a - Initial WIP version.
 #
@@ -28,6 +29,14 @@ import time
 from os import system, name # import only system from os 
 
 GPIO.setwarnings(False) # Deactivate warning messages
+
+
+
+class colours: # You may need to change color settings in iPython
+    RED = '\033[31m'
+    ENDC = '\033[m'
+    GREEN = '\033[32m'
+    # Usage print (colors.GREEN + "text_prt1" , variable , "text_prt2.\n" , colors.ENDC)
 
 # define clear screen function 
 def clear_screen(): 
