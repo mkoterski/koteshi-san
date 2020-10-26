@@ -78,11 +78,12 @@ def menu():
             menu()
     elif choice == 9:
             print ("Shutting down program...")
+            time.sleep(1)
             clear_screen()
             destroy()
     else:    ## default ##
             print ("Invalid number. Try again...")
-            time.sleep(2)
+            time.sleep(1)
             menu()
 
 # Define a setup function for some setup
