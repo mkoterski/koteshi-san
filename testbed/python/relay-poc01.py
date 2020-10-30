@@ -68,7 +68,7 @@ def menu():
      
     ### Take action as per selected menu-option ###
     if choice == 1:
-            print ("Relay turning on for 3 seconds...")
+            print ("Relay turning on for 3 seconds... Yay!")
             setup()
             GPIO.output(7,False)
             time.sleep(4)
