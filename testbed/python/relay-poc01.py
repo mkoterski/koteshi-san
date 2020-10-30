@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # Simple relay test script with menu
 # 
-# Last Update: 2020-10-25
+# Last Update: 2020-10-30
 # Modified by: Matthias Koterski
 #
 # Change log: 
