@@ -3,10 +3,13 @@ import board
 import adafruit_dht
 
 # Initial the dht device, with data pin connected to:
-# When running DHT11 and using GPIO pin no. 4 change string to
-# dhtDevice = adafruit_dht.DHT11(board.D4)
+# When running DHT11 and using GPIO pin no. 18 change string to
+# dhtDevice = adafruit_dht.DHT11(board.D18)
+#
+# When running DHT22 and using GPIO pin no. 4 change string to
+# dhtDevice = adafruit_dht.DHT22(board.D4)
 
-dhtDevice = adafruit_dht.DHT22(board.D18)
+dhtDevice = adafruit_dht.DHT22(board.D4)
 
 # you can pass DHT22 use_pulseio=False if you wouldn't like to use pulseio.
 # This may be necessary on a Linux single board computer like the Raspberry Pi,
