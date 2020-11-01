@@ -1,12 +1,12 @@
 #!/usr/bin/env python
 # Simple relay test script with menu
 # 
-# Last Update: 2020-10-30
+# Last Update: 2020-11-01
 # Modified by: Matthias Koterski
 #
 # Change log: 
 # 
-# 0.1c - added colours class
+# 0.1c - added colours class for some easy text formatting
 # 0.1b - Relay is off when programm is started and can be switched.
 # 0.1a - Initial WIP version.
 #
@@ -36,7 +36,7 @@ class colours: # You may need to change color settings in iPython
     RED = '\033[31m'
     ENDC = '\033[m'
     GREEN = '\033[32m'
-    # Usage print (colors.GREEN + "text_prt1" , variable , "text_prt2.\n" , colors.ENDC)
+    # Usage print (colours.GREEN + "text_prt1" , variable , "text_prt2.\n" , colours.ENDC)
 
 # define clear screen function 
 def clear_screen(): 
@@ -60,7 +60,8 @@ def menu():
     print ("1 - Turns RELAY ON for 3 seconds")
     print ("2 - Turns RELAY OFF for 3 seconds\n")
     print ("5 - Turns RELAY ON for 10 seconds\n")
-    print ("9 - Close program")
+    print (colours.RED + "9 - Close program" , colours.ENDC)
+    # print ("9 - Close program")
     print (55 * '-')
      
     # Get input and convert str to int
