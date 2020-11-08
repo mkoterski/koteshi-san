@@ -65,14 +65,14 @@ def menu():
     if choice == 1:
             print ("Checking for water...")
             setup()
-            def callback(40):
-                if GPIO.input(40):
-                    print("Water Detected!")
-                else:
-                    print("Water Detected!")
+            
+            if GPIO.input(40):
+                print("Water Detected!")
+            else:
+                print("Water Detected!")
  
-            GPIO.add_event_detect(40, GPIO.BOTH, bouncetime=300)  # let us know when the pin goes HIGH or LOW
-            GPIO.add_event_callback(40, callback)  # assign function to GPIO PIN, Run function on change
+            #GPIO.add_event_detect(40, GPIO.BOTH, bouncetime=300)  # let us know when the pin goes HIGH or LOW
+            #GPIO.add_event_callback(40, callback)  # assign function to GPIO PIN, Run function on change
 
             GPIO.output(40,False)
             time.sleep(4)
