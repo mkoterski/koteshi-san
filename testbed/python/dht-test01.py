@@ -1,6 +1,20 @@
 #!/usr/bin/python
+#
+# An attempt to test DHT sensors 11 and 22 without any add. besides GPIO ext. libraries (e.g. adafruit), as
+# those failed previously.
+# 
+# Last Update: 2020-11-08
+# Modified by: Matthias Koterski
+#
+# Change log: 
+# 0.1a - Initial WIP version.
+#
+# Working Instructions:
+# 
+
 import RPi.GPIO as GPIO
 import time
+
 def collect():
     THdata = []
     channel = 7
