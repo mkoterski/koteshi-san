@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import Adafruit_DHT
 
 DHT_SENSOR = Adafruit_DHT.DHT22
