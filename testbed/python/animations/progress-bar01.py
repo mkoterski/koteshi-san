@@ -27,7 +27,7 @@ def progress(count, total, status=''):
     percents = round(100.1 * count / float(total), 1)
     bar = '=' * filled_len + '-' * (bar_len - filled_len)
 
-    sys.stdout.write('\r[%s] %s%s ...%s\r' % (bar, percents, '%', status))
+    sys.stdout.write('[%s] %s%s ...%s\r' % (bar, percents, '%', status))
     # sys.stdout.write('[%s] %s%s ...%s\r' % (bar, percents, '%', status))
     sys.stdout.flush()  # As suggested by Rom Ruben (see: http://stackoverflow.com/questions/3173320/text-progress-bar-in-the-console/27871113#comment50529068_27871113)
 
