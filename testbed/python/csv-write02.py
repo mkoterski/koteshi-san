@@ -47,7 +47,7 @@ dhtDevice = adafruit_dht.DHT22(board.D4, use_pulseio=False)
 def get_temp():
     temperature_c = dhtDevice.temperature
     temperature_c = str(temperature_c)
-    return(temperature)
+    return(temperature_c)
 
 def get_humidity():
 	humidity = dhtDevice.humidity
