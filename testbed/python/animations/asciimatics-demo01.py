@@ -1,4 +1,4 @@
-asciimatics-demo01.py
+#!/usr/bin/env python3
 
 from random import randint
 from asciimatics.screen import Screen
