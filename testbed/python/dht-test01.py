@@ -17,7 +17,7 @@ import time
 
 def collect():
     THdata = []
-    channel = 7
+    channel = 23
     data = []
     GPIO.setmode(GPIO.BOARD)
     time.sleep(2)
