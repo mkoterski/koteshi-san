@@ -29,8 +29,8 @@ while running:
 
     try:
         #read the humidity and temperature
-        humidity = dhtDevice.humidity
-        temperature = dhtDevice.temperature
+        humidity = sensor.humidity
+        temperature = sensor.temperature
 
 		#humidity, temperature = Adafruit_DHT.read_retry(sensor, sensor_pin)
 
