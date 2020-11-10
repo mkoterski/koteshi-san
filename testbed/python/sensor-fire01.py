@@ -31,7 +31,7 @@ sensor = adafruit_dht.DHT22(board.D4, use_pulseio=False)
 #sensor = Adafruit_DHT.AM2302
 
 #Initialise firebase instance
-firebase = firebase.FirebaseApplication("https://koteshi-san.firebaseio.com/", None)
+firebase = firebase.FirebaseApplication("https://koteshi-san.firebaseio.com/", authentication=None)
 
 #create a variable to control the while loop
 running = True
