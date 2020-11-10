@@ -23,7 +23,7 @@ import time
 #import os.path
 import board
 import adafruit_dht
-import firebase
+from firebase import firebase
 
 #comment and uncomment the lines below depending on your sensor. Here the sensor is connected to pin #7 / GPIO4
 #sensor = Adafruit_DHT.DHT11
@@ -31,7 +31,7 @@ sensor = adafruit_dht.DHT22(board.D4, use_pulseio=False)
 #sensor = Adafruit_DHT.AM2302
 
 #Initialise firebase instance
-firebase = firebase.FirebaseApplication('https://koteshi-san.firebaseio.com/', None)
+firebase = firebase.FirebaseApplication("https://koteshi-san.firebaseio.com/", None)
 
 #create a variable to control the while loop
 running = True
