@@ -1,5 +1,3 @@
-file03.py
-
 #!/usr/bin/python
 #
 # When reading from a file, it follows the sequence of open, read, and no (?) close
