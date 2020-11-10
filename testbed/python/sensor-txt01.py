@@ -22,7 +22,7 @@ running = True
 
 #new sensor_txt01.txt file created with header
 log_file = open("sensor_txt01.txt", "w")
-log_file.write("time and date, temperature (C),temperature (F), humidity\n")
+log_file.write("time, date, temperature (C),temperature (F), humidity\n")
 
 #loop forever
 while running:
@@ -41,20 +41,36 @@ while running:
         #the results will be null
         #the next statement guarantees that
         #it only saves valid readings
-        if humidity is not None and temperature is not None:
+        #if humidity is not None and temperature is not None:
 
-            #print temperature and humidity
-            print("Temperature = " + str(temperature) +","+ "Temperature Fahrenheit = " + str(temperature_f) +"," + "Humidity = " + str(humidity))
-            #save time, date, temperature in Celsius, temperature in Fahrenheit and humidity in .txt file
-            #log_file.write(time.strftime("%H:%M:%S %d/%m/%Y") + ", " + str(temperature) + ", "+ str(temperature_f)+"," + str(humidity) + "\n")
-            log_file.write(time.strftime("%Y-%m-%d %H:%M:%S") + ", " + str(temperature) + ", "+ str(temperature_f)+"," + str(humidity) + "\n")
-            time.sleep(1)
+        #print temperature and humidity
+        print("Temperature = " + str(temperature) +","+ "Temperature Fahrenheit = " + str(temperature_f) +"," + "Humidity = " + str(humidity))
+        #save time, date, temperature in Celsius, temperature in Fahrenheit and humidity in .txt file
+        #log_file.write(time.strftime("%H:%M:%S %d/%m/%Y") + ", " + str(temperature) + ", "+ str(temperature_f)+"," + str(humidity) + "\n")
+        log_file.write(time.strftime("%Y-%m-%d %H:%M:%S") + ", " + str(temperature) + ", "+ str(temperature_f)+"," + str(humidity) + "\n")
+        time.sleep(1)
 
-        else:
-            print("Failed to get reading. Try again!")
-            time.sleep(1)
+    except RuntimeError as error:
+    # Errors happen fairly often, DHT's are hard to read, just keep going
+    #print(error.args[0])
+	    time.sleep(2.0)
+    	continue
+
+    except Exception as error:
+    	sensor.exit()
+    	raise error
 
     except KeyboardInterrupt:
         print ("Program stopped")
         running = False
         log_file.close()
+
+time.sleep(5.0)
+
+
+
+
+
+
+
+
