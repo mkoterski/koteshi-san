@@ -7,7 +7,7 @@
 #
 # Change log: 
 # 
-# 0.1a - Initial WIP version.
+# 0.1a - Initial WIP version. Still not working. Syntax Error during connection establishment.
 #
 # Requirements:
 # 1. Raspberry Pi B+ model
