@@ -48,7 +48,7 @@ while running:
         print("Temperature = " + str(temperature) +","+ "Temperature Fahrenheit = " + str(temperature_f) +"," + "Humidity = " + str(humidity))
         #save time, date, temperature in Celsius, temperature in Fahrenheit and humidity in .txt file
         #log_file.write(time.strftime("%H:%M:%S %d/%m/%Y") + ", " + str(temperature) + ", "+ str(temperature_f)+"," + str(humidity) + "\n")
-        log_file.write(time.strftime("%Y-%m-%d, %H:%M:%S") + ", " + str(temperature) + ", "+ str(humidity)"\n")
+        log_file.write(time.strftime("%Y-%m-%d %H:%M:%S") + ", " + str(temperature) + "," + str(humidity) + "\n")
         time.sleep(1)
 
     except RuntimeError as error:
