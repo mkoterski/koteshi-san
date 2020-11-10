@@ -1,10 +1,8 @@
 #!/usr/bin/python
 #
-# When writing to files, it follows the sequence of open, write, close
+# When writing a file, it follows the sequence of open, write, close
 #
 #
-
-import time
 
 text_to_write = "Sample text to save!\n" # \n for line break
 
