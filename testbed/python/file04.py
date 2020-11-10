@@ -9,4 +9,4 @@
 # Returns a list
 Read_me = open("example_file.txt","r").readlines() # "r" read, "w" write, or "a" append
 
-Print(Read_me)
+print(Read_me)
