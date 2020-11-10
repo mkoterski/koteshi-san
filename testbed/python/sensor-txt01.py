@@ -36,25 +36,15 @@ while running:
 
 		#humidity, temperature = Adafruit_DHT.read_retry(sensor, sensor_pin)
 
-        #uncomment the line below to convert to Fahrenheit
-        #temperature_f = temperature * 9/5.0 + 32
-
-        #sometimes you won't get a reading and
-        #the results will be null
-        #the next statement guarantees that
-        #it only saves valid readings
-        #if humidity is not None and temperature is not None:
-
         #print temperature and humidity
         print("Temperature: " + str(temperature) + " °C, " + "Humidity: " + str(humidity) + " %")
-        #save time, date, temperature in Celsius, temperature in Fahrenheit and humidity in .txt file
-        #log_file.write(time.strftime("%H:%M:%S %d/%m/%Y") + ", " + str(temperature) + ", "+ str(temperature_f)+"," + str(humidity) + "\n")
+        #save date, time, temperature in Celsius, and humidity in sensor_log01.txt file
         log_file.write(time.strftime("%Y-%m-%d,%H:%M:%S") + "," + str(temperature) + "," + str(humidity) + "\n")
         time.sleep(1)
 
     except RuntimeError as error:
-    # Errors happen fairly often, DHT's are hard to read, just keep going
-    #print(error.args[0])
+    # In case you are interested in the error message you can uncomment the following line
+    #    print(error.args[0]) 
         time.sleep(2.0)
         continue
 
