@@ -23,7 +23,7 @@ running = True
 #new sensor_txt01.txt file created with header
 log_file = open("sensor_txt01.txt", "w")
 #log_file.write("time, date, temperature (C),temperature (F), humidity\n")
-log_file.write("time, date, temperature (C), humidity\n")
+log_file.write("date, time, temperature (C), humidity\n")
 
 #loop forever
 while running:
@@ -45,10 +45,10 @@ while running:
         #if humidity is not None and temperature is not None:
 
         #print temperature and humidity
-        print("Temperature = " + str(temperature) + ", " + "Humidity = " + str(humidity))
+        print("Temperature: " + str(temperature) + "°C , " + "Humidity: " + str(humidity) + " %")
         #save time, date, temperature in Celsius, temperature in Fahrenheit and humidity in .txt file
         #log_file.write(time.strftime("%H:%M:%S %d/%m/%Y") + ", " + str(temperature) + ", "+ str(temperature_f)+"," + str(humidity) + "\n")
-        log_file.write(time.strftime("%Y-%m-%d %H:%M:%S") + ", " + str(temperature) + ", " + str(humidity) + "\n")
+        log_file.write(time.strftime("%Y-%m-%d, %H:%M:%S") + ", " + str(temperature) + ", " + str(humidity) + "\n")
         time.sleep(1)
 
     except RuntimeError as error:
