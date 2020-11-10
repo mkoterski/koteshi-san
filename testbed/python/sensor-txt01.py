@@ -56,9 +56,9 @@ while running:
 	    time.sleep(2.0)
     	continue
 
-    except Exception as error:
-    	sensor.exit()
-    	raise error
+    # except Exception as error:
+    # 	sensor.exit()
+    # 	raise error
 
     except KeyboardInterrupt:
         print ("Program stopped")
