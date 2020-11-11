@@ -11,6 +11,14 @@ import board
 import busio
 import adafruit_bme280
 
+#dew point calculation
+# import math
+# b = 17.62
+# c = 243.12
+# gamma = (b * bme280.temperature /(c + bme280.temperature)) + math.log(bme280.humidity / 100.0)
+# dewpoint = (c * gamma) / (b - gamma)
+# print(dewpoint)
+
 # Create library object using our Bus I2C port
 i2c = busio.I2C(board.SCL, board.SDA)
 bme280 = adafruit_bme280.Adafruit_BME280_I2C(i2c)
