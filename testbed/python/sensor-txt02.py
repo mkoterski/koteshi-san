@@ -39,10 +39,10 @@ running = True
 #If sensor_log01.txt does not exist, it will be created. Changing mode from write to append
 
 if os.path.exists("sensor_log02.txt"):
-    log_file = open("sensor_log02.txt", "a")
+    log_file2 = open("sensor_log02.txt", "a")
 else:
-    log_file = open("sensor_log02.txt", "w")
-    log_file.write("date, time, temperature (C), air pressure hPa, humidity rH, \n")
+    log_file2 = open("sensor_log02.txt", "w")
+    log_file2.write("date, time, temperature (C), air pressure hPa, humidity rH, \n")
 
 #loop forever
 while running:
@@ -67,7 +67,7 @@ while running:
         print(time.strftime("%Y-%m-%d - %H:%M:%S - ") + "Temperature: " + str(temperature) + " °C, " + "Pressure: " + str(pressure) + " hPa, " + "Humidity: " + str(humidity) + " % ")
         
         #save date, time, temperature in Celsius, and humidity in sensor_log01.txt file
-        log_file.write(time.strftime("%Y-%m-%d,%H:%M:%S") + "," + str(temperature) + "," + str(pressure) + "," + str(humidity) + "\n")
+        log_file2.write(time.strftime("%Y-%m-%d,%H:%M:%S") + "," + str(temperature) + "," + str(pressure) + "," + str(humidity) + "\n")
         time.sleep(1.0)
 
     except RuntimeError as error:
@@ -84,6 +84,6 @@ while running:
     except KeyboardInterrupt:
         print ("Program stopped")
         running = False
-        log_file.close()
+        log_file2.close()
 
 time.sleep(2.0)
