@@ -24,9 +24,11 @@ import os.path
 import board
 import adafruit_dht
 
-#comment and uncomment the lines below depending on your sensor. Here the sensor is connected to pin #7 / GPIO4
+#comment and uncomment the lines below depending on your sensor.
+#Add use_pulseio=False as Raspberry Pi may not be able to read sensor otherwise
+
 #sensor = Adafruit_DHT.DHT11
-sensor = adafruit_dht.DHT22(board.D4, use_pulseio=False)
+sensor = adafruit_dht.DHT22(board.D4, use_pulseio=False) # The sensor is connected to pin #7 / GPIO4
 #sensor = Adafruit_DHT.AM2302
 
 #create a variable to control the while loop
@@ -49,7 +51,7 @@ while running:
         temperature = sensor.temperature
 
         #print temperature and humidity to screen
-        print("Temperature: " + str(temperature) + " °C, " + "Humidity: " + str(humidity) + " %")
+        print(time.strftime("%Y-%m-%d - %H:%M:%S - ") + "Temperature: " + str(temperature) + " °C, " + "Humidity: " + str(humidity) + " %")
         
         #save date, time, temperature in Celsius, and humidity in sensor_log01.txt file
         log_file.write(time.strftime("%Y-%m-%d,%H:%M:%S") + "," + str(temperature) + "," + str(humidity) + "\n")
