@@ -42,7 +42,7 @@ if os.path.exists("sensor_log02.txt"):
     log_file = open("sensor_log02.txt", "a")
 else:
     log_file = open("sensor_log02.txt", "w")
-    log_file.write("date, time, temperature (C), humidity rH, air pressure hPa\n")
+    log_file.write("date, time, temperature (C), air pressure hPa, humidity rH, \n")
 
 #loop forever
 while running:
