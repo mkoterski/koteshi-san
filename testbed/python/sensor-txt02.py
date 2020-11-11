@@ -23,6 +23,10 @@ import os.path
 import smbus2
 import bme280
 
+#only required for dew point calculation
+import math
+
+#connection parameters
 port = 1
 address = 0x76
 bus = smbus2.SMBus(port)
