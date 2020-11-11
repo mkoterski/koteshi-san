@@ -20,15 +20,14 @@
 
 import time
 import os.path
-#import board
-#import adafruit_dht
+import smbus2
+import bme280
 
-#comment and uncomment the lines below depending on your sensor.
-#Add use_pulseio=False as Raspberry Pi may not be able to read sensor otherwise
+port = 1
+address = 0x76
+bus = smbus2.SMBus(port)
 
-#sensor = Adafruit_DHT.DHT11
-sensor = adafruit_dht.DHT22(board.D4, use_pulseio=False) # The sensor is connected to pin #7 / GPIO4
-#sensor = Adafruit_DHT.AM2302
+calibration_params = bme280.load_calibration_params(bus, address)
 
 #create a variable to control the while loop
 running = True
@@ -39,21 +38,32 @@ if os.path.exists("sensor_log02.txt"):
     log_file = open("sensor_log02.txt", "a")
 else:
     log_file = open("sensor_log02.txt", "w")
-    log_file.write("date, time, temperature (C), humidity\n")
+    log_file.write("date, time, temperature (C), humidity rH, air pressure hPa\n")
 
 #loop forever
 while running:
 
     try:
         #read the humidity and temperature
-        humidity = sensor.humidity
-        temperature = sensor.temperature
 
-        #print temperature and humidity to screen
-        print(time.strftime("%Y-%m-%d - %H:%M:%S - ") + "Temperature: " + str(temperature) + " °C, " + "Humidity: " + str(humidity) + " %")
+        data = bme280.sample(bus, address, calibration_params)
+
+        # dew point calculation
+        b = 17.62
+        c = 243.12
+        gamma = (b * data.temperature /(c + data.temperature)) + math.log(data.humidity / 100.0)
+        dew_point = (c * gamma) / (b - gamma)
+
+        # read metrics
+        humidity = data.humidity
+        temperature = data.temperature
+        pressure = data.pressure
+
+        #print temperature, pressure, and humidity to screen
+        print(time.strftime("%Y-%m-%d - %H:%M:%S - ") + "Temperature: " + str(temperature) + " °C, " + "Pressure: " + str(pressure) + " hPa, " + "Humidity: " + str(humidity) + " % ")
         
         #save date, time, temperature in Celsius, and humidity in sensor_log01.txt file
-        log_file.write(time.strftime("%Y-%m-%d,%H:%M:%S") + "," + str(temperature) + "," + str(humidity) + "\n")
+        log_file.write(time.strftime("%Y-%m-%d,%H:%M:%S") + "," + str(temperature) + "," + str(pressure) + "," + str(humidity) + "\n")
         time.sleep(1.0)
 
     except RuntimeError as error:
@@ -64,7 +74,7 @@ while running:
         continue
 
     except Exception as error:
-        sensor.exit()
+        calibration_params.exit()
         raise error
 
     except KeyboardInterrupt:
