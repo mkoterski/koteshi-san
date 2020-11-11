@@ -28,12 +28,12 @@ gamma = (b * data.temperature /(c + data.temperature)) + math.log(data.humidity 
 dew_point = (c * gamma) / (b - gamma)
 
 # the compensated_reading class has the following attributes
-print(data.id)
-print(data.timestamp)
-print(data.temperature)
-print(data.pressure)
-print(data.humidity)
-print(dew_point)
+print("Data ID: ",data.id)
+print("Time stamp: ",data.timestamp)
+print("Temperature: ",data.temperature)
+print("Air pressure: ",data.pressure)
+print("Humidity: ",data.humidity)
+print("Dew point: ",dew_point)
 
 # there is a handy string representation too
 print(data)
