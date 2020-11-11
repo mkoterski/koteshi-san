@@ -1,37 +1,31 @@
 #!/usr/bin/python
 #
-# run "pip3 install RPi.bme280" to install necessary libraries
+# BME280 test with alternative library
+# run "pip3 install adafruit-circuitpython-bme280" to install necessary library
+#
+#
 
-# pi@koteshi-san:~ $ sudo pip3 install RPi.bme280
-# Looking in indexes: https://pypi.org/simple, https://www.piwheels.org/simple
-# Collecting RPi.bme280
-#   Downloading RPi.bme280-0.2.3-py2.py3-none-any.whl (10 kB)
-# Collecting smbus2
-#   Downloading https://www.piwheels.org/simple/smbus2/smbus2-0.3.0-py2.py3-none-any.whl (9.1 kB)
-# Installing collected packages: smbus2, RPi.bme280
-# Successfully installed RPi.bme280-0.2.3 smbus2-0.3.0
+import time
 
-# For a data-logger like application, periodically call bme2.sample(bus, address, calibration_params) to get time-based readings.
+import board
+import busio
+import adafruit_bme280
 
-import smbus2
-import bme280
+# Create library object using our Bus I2C port
+i2c = busio.I2C(board.SCL, board.SDA)
+bme280 = adafruit_bme280.Adafruit_BME280_I2C(i2c)
 
-port = 1
-address = 0x76
-bus = smbus2.SMBus(port)
+# OR create library object using our Bus SPI port
+# spi = busio.SPI(board.SCK, board.MOSI, board.MISO)
+# bme_cs = digitalio.DigitalInOut(board.D10)
+# bme280 = adafruit_bme280.Adafruit_BME280_SPI(spi, bme_cs)
 
-calibration_params = bme280.load_calibration_params(bus, address)
+# change this to match the location's pressure (hPa) at sea level
+bme280.sea_level_pressure = 1022.01
 
-# the sample method will take a single reading and return a
-# compensated_reading object
-data = bme280.sample(bus, address, calibration_params)
-
-# the compensated_reading class has the following attributes
-print(data.id)
-print(data.timestamp)
-print(data.temperature)
-print(data.pressure)
-print(data.humidity)
-
-# there is a handy string representation too
-print(data)
+while True:
+    print("\nTemperature: %0.1f C" % bme280.temperature)
+    print("Humidity: %0.1f %%" % bme280.humidity)
+    print("Pressure: %0.1f hPa" % bme280.pressure)
+    print("Altitude = %0.2f meters" % bme280.altitude)
+    time.sleep(2)
