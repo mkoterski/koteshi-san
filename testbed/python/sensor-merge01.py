@@ -1,21 +1,22 @@
 #!/usr/bin/env python
 #
-# Simple test to write DHT sensor data to .txt file
+# Simple test to write combine readings for DHT and BME280 sensor data to different .txt files
 # If log file does not exists yet, it will be created
 # 
-# Last Update: 2020-11-10
+# Last Update: 2020-11-11
 # Modified by: Matthias Koterski
 #
 # Change log: 
 # 
-# 0.1a - Initial version.
+# 0.1a - Initial WIP version.
 #
 # Requirements:
 # 1. Raspberry Pi B+ model
-# 2. DHT sensor
+# 2. Sensors (e.g. DHT22, BME280)
 # 3. Jumper cables
 # 4. CircuitPython-DHT library (run "pip3 install adafruit-circuitpython-dht && sudo apt-get install libgpiod2")
-# (5. Depending on the sensor model you may need a pull up resistor)
+# 5. BME280 library (run "pip3 install RPi.bme280" to install necessary libraries)
+# (x. Depending on the sensor model you may need a pull up resistor)
 #
 ####################################################################################################################
 

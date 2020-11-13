@@ -27,6 +27,9 @@ c = 243.12
 gamma = (b * data.temperature /(c + data.temperature)) + math.log(data.humidity / 100.0)
 dew_point = (c * gamma) / (b - gamma)
 
+# change this to match the location's pressure (hPa) at sea level
+data.sea_level_pressure = 1022.01
+
 # the compensated_reading class has the following attributes
 print("Data ID: ",data.id)
 print("Time stamp: ",data.timestamp)
