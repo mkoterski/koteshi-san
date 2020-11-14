@@ -1,5 +1,5 @@
 #! /usr/bin/env python
-# python programa to comunicate with an MCP3008
+# python program to comunicate with an MCP3008
 # Import our SpiDev wrapper and our sleep function
 
 import spidev
@@ -14,10 +14,10 @@ def getAdc (channel):
     if ((channel>7)or(channel<0)):
         return -1
 
-    # Preform SPI transaction and store returned bits in 'r'
+    # Perform SPI transaction and store returned bits in 'r'
     r = spi.xfer([1, (8+channel) << 4, 0])
 
-    #Filter data bits from retruned bits
+    #Filter data bits from returned bits
     adcOut = ((r[1]&3) << 8) + r[2]
     percent = int(round(adcOut/10.24))
 
