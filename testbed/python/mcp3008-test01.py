@@ -28,3 +28,76 @@ def getAdc (channel):
 while True:
     getAdc(0)
 
+
+# SAMPLE OUTPUT
+#
+# pi@koteshi-san:/koteshi-san/testbed/python $ sudo python3 mcp3008-test01.py
+# ADC Output: 1023 Percentage: 100%
+# ADC Output: 1023 Percentage: 100%
+# ADC Output: 1023 Percentage: 100%
+# ADC Output: 1023 Percentage: 100%
+# ADC Output: 1023 Percentage: 100%
+# ADC Output: 1023 Percentage: 100%
+# ADC Output: 1023 Percentage: 100%
+# ADC Output: 1023 Percentage: 100%
+# ADC Output: 1023 Percentage: 100%
+# ADC Output: 1023 Percentage: 100%
+# ADC Output: 1023 Percentage: 100%
+# ADC Output: 1023 Percentage: 100%
+# ADC Output:  895 Percentage:  87%
+# ADC Output:  895 Percentage:  87%
+# ADC Output:  895 Percentage:  87%
+# ADC Output:  895 Percentage:  87%
+# ADC Output:  895 Percentage:  87%
+# ADC Output:  895 Percentage:  87%
+# ADC Output:  895 Percentage:  87%
+# ADC Output:  895 Percentage:  87%
+# ADC Output:  895 Percentage:  87%
+# ADC Output:  895 Percentage:  87%
+# ADC Output:  895 Percentage:  87%
+# ADC Output:  895 Percentage:  87%
+# ADC Output:  895 Percentage:  87%
+# ADC Output: 1023 Percentage: 100%
+# ADC Output: 1023 Percentage: 100%
+# ADC Output: 1023 Percentage: 100%
+# ADC Output: 1023 Percentage: 100%
+# ADC Output: 1023 Percentage: 100%
+# ADC Output:  895 Percentage:  87%
+# ADC Output:  895 Percentage:  87%
+# ADC Output:  895 Percentage:  87%
+# ADC Output:  895 Percentage:  87%
+# ADC Output:  895 Percentage:  87%
+# ADC Output:  895 Percentage:  87%
+# ADC Output: 1023 Percentage: 100%
+# ADC Output:  895 Percentage:  87%
+# ADC Output: 1023 Percentage: 100%
+# ADC Output: 1023 Percentage: 100%
+# ADC Output: 1023 Percentage: 100%
+# ADC Output: 1023 Percentage: 100%
+# ADC Output: 1023 Percentage: 100%
+# ADC Output: 1023 Percentage: 100%
+# ADC Output: 1023 Percentage: 100%
+# ADC Output: 1023 Percentage: 100%
+# ADC Output: 1023 Percentage: 100%
+# ADC Output: 1023 Percentage: 100%
+# ADC Output: 1023 Percentage: 100%
+# ADC Output: 1023 Percentage: 100%
+# ADC Output: 1023 Percentage: 100%
+# ADC Output:  895 Percentage:  87%
+# ADC Output:  895 Percentage:  87%
+# ADC Output: 1023 Percentage: 100%
+# ADC Output:  895 Percentage:  87%
+# ADC Output:  895 Percentage:  87%
+# ADC Output:  895 Percentage:  87%
+# ADC Output:  895 Percentage:  87%
+# ADC Output:  895 Percentage:  87%
+# ADC Output:  895 Percentage:  87%
+# ADC Output:  831 Percentage:  81%
+# ADC Output:  991 Percentage:  97%
+# ADC Output:    0 Percentage:   0%
+# ADC Output:    0 Percentage:   0%
+# ADC Output:    0 Percentage:   0%
+# ADC Output: 1023 Percentage: 100%
+# ADC Output:    0 Percentage:   0%
+# ADC Output:    0 Percentage:   0%
+# ADC Output:    0 Percentage:   0%
