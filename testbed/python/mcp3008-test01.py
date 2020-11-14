@@ -23,7 +23,7 @@ def getAdc (channel):
 
     #print out 0-1023 value and percentage
     print(("ADC Output: {0:4d} Percentage: {1:3}%".format (adcOut,percent)))
-    sleep(0.1)
+    sleep(2.0)
 
 while True:
     getAdc(0)
