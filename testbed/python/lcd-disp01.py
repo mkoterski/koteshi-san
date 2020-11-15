@@ -87,9 +87,9 @@ if __name__ == '__main__':
 
 	
 	lcd_send_byte(LCD_LINE_1, LCD_CMD)
-	lcd_message("Es scheint zu")
+	lcd_message("Koteshi-san v0.2")
 	lcd_send_byte(LCD_LINE_2, LCD_CMD)
-	lcd_message("funktionieren :)")
+	lcd_message("Auto Gardening")
 	
 	time.sleep(4)
 	
