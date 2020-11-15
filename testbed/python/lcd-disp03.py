@@ -1,7 +1,20 @@
+
 #!/usr/bin/python
 #
 # Originally found at https://tutorials-raspberrypi.de/raspberry-pi-lcd-display-16x2-hd44780/
 # Modified to utilise 2 potentiometers to control the displays contrast and brightness
+
+# how to setup an lcd on raspberry pi and programm with python
+
+# LCD Pin    RPi Pin
+
+# D0        40
+# D1        38
+# D2        36
+# D3        32
+       
+
+
 
 import time
 import RPi.GPIO as GPIO
