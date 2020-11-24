@@ -3,6 +3,8 @@
 # Originally found at https://tutorials-raspberrypi.de/raspberry-pi-lcd-display-16x2-hd44780/
 # Modified to utilise 2 potentiometers to control the displays contrast and brightness
 
+how to setup an lcd on raspberry pi and programm with python
+
 import time
 import RPi.GPIO as GPIO
 
