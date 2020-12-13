@@ -3,7 +3,7 @@
 # 
 # Add the script call as the last line in /etc/profile 
 #
-# Last Update: 2020-09-03
+# Last Update: 2020-12-13
 # Modified by: Matthias Koterski
 #
 # To do:
@@ -68,7 +68,7 @@ RAM7=`free --mega | grep 'Swap' | awk '{print $4}'` # Swap free
 RAMARM=`vcgencmd get_mem arm | tail -c 5` #ARM MEM
 RAMGPU=`vcgencmd get_mem gpu | tail -c 4` #GPU MEM
 
-# Find IP addresses 1.3
+# Find IP addresses 1.4
 if ( ifconfig | grep -q "eth0" ) ; then IP_LAN=`ip addr show eth0 | grep -vw "inet6" | grep "global" | grep -w "inet" | cut -d/ -f1 | awk '{ print $2 }'` ; else IP_LAN="---" ; fi ; #Ethernet IP
 if ( ifconfig | grep -q "wlan0" ) ; then IP_WIFI=`ip addr show wlan0 | grep -vw "inet6" | grep "global" | grep -w "inet" | cut -d/ -f1 | awk '{ print $2 }'` ; else IP_WIFI="---" ; fi ; #WiFi IP
 IP_WAN=`wget -q -O - http://icanhazip.com/ | tail` #WAN IP
